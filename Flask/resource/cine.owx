@@ -1,0 +1,2325 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/mejia/cine"
+         xmlns="http://www.semanticweb.org/mejia/cine#"
+         xmlns:unti="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/mejia/cine"/>
+
+<owl:ObjectProperty rdf:about="#actorGana">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#premioSeEntregaActor"/>
+  <rdfs:domain rdf:resource="#Actor"/>
+  <rdfs:range rdf:resource="#Premio"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#premioSeEntregaActor">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="#Actor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#apareceEn">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#obraTieneCancion"/>
+  <rdfs:domain rdf:resource="#Cancion"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#obraTieneCancion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Cancion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#directorGana">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#premioSeEntregaDirector"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Director"/>
+  <rdfs:range rdf:resource="#Premio"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#premioSeEntregaDirector">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="#Director"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#dirigeObra">
+  <owl:inverseOf rdf:resource="#tieneDirector"/>
+  <rdfs:domain rdf:resource="#Director"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneDirector">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Director"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#esBandaSonoraDe">
+  <owl:inverseOf rdf:resource="#tieneBandaSonora"/>
+  <rdfs:domain rdf:resource="#BandaSonora"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneBandaSonora">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#BandaSonora"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#esParteDeObra">
+  <owl:inverseOf rdf:resource="#tienePersonaje"/>
+  <rdfs:domain rdf:resource="#Personaje"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tienePersonaje">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Personaje"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#esPrecuelaDe">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#esSecuelaDe"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#esSecuelaDe">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#esSobreLaObra">
+  <owl:inverseOf rdf:resource="#tieneCritica"/>
+  <rdfs:domain rdf:resource="#Critica"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneCritica">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Critica"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estudioDesarrolla">
+  <owl:inverseOf rdf:resource="#tieneEstudio"/>
+  <rdfs:domain rdf:resource="#Estudio"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneEstudio">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Estudio"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#generoPerteneceAObra">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#tieneGenero"/>
+  <rdfs:domain rdf:resource="#Genero"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneGenero">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Genero"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#interpretaA">
+  <owl:inverseOf rdf:resource="#interpretadoPor"/>
+  <rdfs:domain rdf:resource="#Actor"/>
+  <rdfs:range rdf:resource="#Personaje"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#interpretadoPor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Personaje"/>
+  <rdfs:range rdf:resource="#Actor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#obraGana">
+  <owl:inverseOf rdf:resource="#premioSeEntregaObra"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Premio"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#premioSeEntregaObra">
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#participaEn">
+  <owl:inverseOf rdf:resource="#tieneActor"/>
+  <rdfs:domain rdf:resource="#Actor"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneActor">
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Actor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#perteneceA">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#tieneCancion"/>
+  <rdfs:domain rdf:resource="#Cancion"/>
+  <rdfs:range rdf:resource="#BandaSonora"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneCancion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#BandaSonora"/>
+  <rdfs:range rdf:resource="#Cancion"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#produce">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#tieneProductora"/>
+  <rdfs:domain rdf:resource="#Productora"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneProductora">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Productora"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#seAplicaAObra">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#tieneEdicion"/>
+  <rdfs:domain rdf:resource="#Edicion"/>
+  <rdfs:range rdf:resource="#Obra"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tieneEdicion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="#Edicion"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#CantidadCapitulo">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Serie"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#DescripcionCritica">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Critica"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#TecnicaEdicion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Edicion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#anioEntrega">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#anioFundacionEstudio">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Estudio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#anioFundacionProductora">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Productora"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#anioTrayectoria">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#PersonaCinematografica"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#cantidadTemporada">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Serie"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#categoriaPremio">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#cgi">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#descripcionGenero">
+  <rdfs:domain rdf:resource="#Genero"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#descripcionPersonaje">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Personaje"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#distribuidora">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#doblaje">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#duracion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Pelicula"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#duracionCancion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Cancion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#edad">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#PersonaCinematografica"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <owl:withRestrictions>
+        <rdf:Description>
+          <rdf:first>
+            <rdf:Description>
+              <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minExclusive>
+            </rdf:Description>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </owl:withRestrictions>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#enfoque">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Documental"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#estado">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Serie"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#estiloDireccion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Director"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#estreno">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+      <owl:withRestrictions>
+        <rdf:Description>
+          <rdf:first>
+            <rdf:Description>
+              <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</xsd:minExclusive>
+            </rdf:Description>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </owl:withRestrictions>
+    </rdfs:Datatype>
+  </rdfs:range>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#formacionDireccion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Director"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#genero">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#generoCancion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Cancion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#idiomaActor">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Actor"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#lenguajeNativo">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#metodoDireccion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Director"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#motivo">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nacionalidad">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#PersonaCinematografica"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombre">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#PersonaCinematografica"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombreBanda">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#BandaSonora"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombreEstudio">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Estudio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombreGenero">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Genero"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombreObra">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombrePersonaje">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Personaje"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nombrePremio">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Premio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#objetivo">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Documental"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#popularidad">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#precuela">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#presupuesto">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#recaudacion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#rolPersonaje">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Personaje"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#secuela">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#sinopsis">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tema">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Documental"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tipo">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Pelicula"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#tipoActuacion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Actor"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#trailer">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Obra"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#ubicacionEstudio">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Estudio"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#ubicacionProductora">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Productora"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#encargadoEdicion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Edicion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#generoMusica">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#BandaSonora"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreCancion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Cancion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreCritico">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Critica"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreProductora">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Productora"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#puntuacion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Critica"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#softwareEdicion">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:domain rdf:resource="#Edicion"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Actor">
+  <rdfs:subClassOf rdf:resource="#PersonaCinematografica"/>
+  <owl:disjointWith rdf:resource="#Director"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Premio"/>
+
+<owl:Class rdf:about="#Cancion"/>
+
+<owl:Class rdf:about="#Obra"/>
+
+<owl:Class rdf:about="#Director">
+  <rdfs:subClassOf rdf:resource="#PersonaCinematografica"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BandaSonora"/>
+
+<owl:Class rdf:about="#Personaje"/>
+
+<owl:Class rdf:about="#Critica"/>
+
+<owl:Class rdf:about="#Estudio"/>
+
+<owl:Class rdf:about="#Genero"/>
+
+<owl:Class rdf:about="#Productora"/>
+
+<owl:Class rdf:about="#Edicion"/>
+
+<owl:Class rdf:about="#Serie">
+  <rdfs:subClassOf rdf:resource="#Obra"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PersonaCinematografica"/>
+
+<owl:Class rdf:about="#Pelicula">
+  <rdfs:subClassOf rdf:resource="#Obra"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Documental">
+  <rdfs:subClassOf rdf:resource="#Obra"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#A_Klaeidoskope">
+  <rdf:type rdf:resource="#Cancion"/>
+  <duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</duracionCancion>
+  <generoCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banda sonora dramática</generoCancion>
+  <unti:nombreCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Kaeidoskope</unti:nombreCancion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Accion">
+  <rdf:type rdf:resource="#Genero"/>
+  <generoPerteneceAObra rdf:resource="#El_Renacido"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <generoPerteneceAObra rdf:resource="#Titanic"/>
+  <generoPerteneceAObra rdf:resource="#Una_mente_brillante"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas caracterizadas por escenas de violencia, persecuciones, combates y altos niveles de energía.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#El_Renacido">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <obraGana rdf:resource="#premioOscar_MejorFotografiaER"/>
+  <tieneActor rdf:resource="#Leonardo_DiCaprio"/>
+  <tieneActor rdf:resource="#Tom_Hardy"/>
+  <tieneCritica rdf:resource="#Richard_Roeper"/>
+  <tieneDirector rdf:resource="#Alejandro_G._Iñárritu"/>
+  <tieneEstudio rdf:resource="#20th_Century_Fox"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tienePersonaje rdf:resource="#Hugh_Glass"/>
+  <tienePersonaje rdf:resource="#John_Fitzgerald"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th Century Fox</distribuidora>
+  <doblaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Español</doblaje>
+  <doblaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">frances</doblaje>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.12</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Renacido</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">135000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">533000000</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basada en hechos reales, El Renacido sigue la historia de Hugh Glass, un explorador del siglo XIX que es atacado por un oso y dejado por muerto. Su lucha por sobrevivir y vengarse es una historia de resistencia y perseverancia.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=a8HRA49kaok</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_el_Cáliz_de_Fuego">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <obraGana rdf:resource="#BAFTA_MejorDiseñoVestuario_2006"/>
+  <obraGana rdf:resource="#NationalMovieAward_MejorPelícula_2006"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#RalphFiennes"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Lord_Voldemort"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.57</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y el Cáliz de Fuego</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">150000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">896911078</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry participa en el Torneo de los Tres Magos y presencia el regreso de Voldemort.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=wX5dWfUKGPg</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_el_Misterio_del_Príncipe">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <obraGana rdf:resource="#PeopleChoiceAward_MejorPelícula_2010"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#RalphFiennes"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Lord_Voldemort"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.53</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y el Misterio del Príncipe</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250000000.0</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">934416487.0</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry descubre los horrocruxes de Voldemort y pierde a Dumbledore en manos de Snape.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=CHiGk9bEht8</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_la_Orden_del_Fénix">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <obraGana rdf:resource="#KidsChoiceAward_MejorPelícula_2008"/>
+  <obraGana rdf:resource="#SatelliteAward_MejorEfectosVisuales_2008"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#RalphFiennes"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Lord_Voldemort"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.38</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y la Orden del Fénix</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">150000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">939885929</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry forma el Ejército de Dumbledore para resistir al Ministerio de Magia y a los Mortífagos.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=jdEulcjAvQI</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <obraGana rdf:resource="#BAFTA_MejorEfectosVisuales_2012"/>
+  <obraGana rdf:resource="#Saturn_MejorPelículaFantasía_2012"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#RalphFiennes"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tieneGenero rdf:resource="#Suspenso"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Lord_Voldemort"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.46</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y las Reliquias de la Muerte - Parte 1</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">125000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1960283305</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry, Ron y Hermione buscan horrocruxes mientras el Ministerio cae en manos de Voldemort</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=GdNvFDzSNHQ</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <obraGana rdf:resource="#PCA_MejorReparto_2012"/>
+  <obraGana rdf:resource="#premioBarfta_premioEspecialHP"/>
+  <obraGana rdf:resource="#premioSaturn_mejorPFHP"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#RalphFiennes"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneCritica rdf:resource="#SnoopyStyle"/>
+  <tieneCritica rdf:resource="#TheLittleSongbird"/>
+  <tieneCritica rdf:resource="#hjpog"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tieneGenero rdf:resource="#Suspenso"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Lord_Voldemort"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011.0</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suspenso</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y las Reliquias de la Muerte - Parte 2</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.2</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">125000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1342000000</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry, Ron y Hermione buscan los horrocruxes para derrotar a Voldemort en la batalla final de Hogwarts.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=HguSMW8XveQ</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Titanic">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <obraGana rdf:resource="#Globo_de_Oro"/>
+  <obraGana rdf:resource="#premioOscar_MejorPT"/>
+  <tieneActor rdf:resource="#Leonardo_DiCaprio"/>
+  <tieneDirector rdf:resource="#James_Cameron"/>
+  <tieneEstudio rdf:resource="#Universal_Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Romance"/>
+  <tienePersonaje rdf:resource="#Jack_Dawson"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th Century Fox / Paramaunt Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.12</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romantico</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingles</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titanic</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2264000000</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack y Rose, dos jovenes de diferentes clases sociales se ,se enamoran a bordo del Titanic ,enfrentando la tragedia del naufragio</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largometraeje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=tA_qMdzvCvk</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Una_mente_brillante">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <obraGana rdf:resource="#premioOscar_MejorGuionUMB"/>
+  <obraGana rdf:resource="#premioOscar_MejorPeliculaUMB"/>
+  <obraTieneCancion rdf:resource="#A_Klaeidoskope"/>
+  <tieneActor rdf:resource="#Ed_Harris"/>
+  <tieneActor rdf:resource="#Jennifer_Connelly"/>
+  <tieneActor rdf:resource="#Paul_Bettany"/>
+  <tieneActor rdf:resource="#Russell_Crowe"/>
+  <tieneBandaSonora rdf:resource="#James_Horner"/>
+  <tieneCritica rdf:resource="#Edward_Guthmann"/>
+  <tieneDirector rdf:resource="#Ron_Howard"/>
+  <tieneEdicion rdf:resource="#Mike_Hill_y_Dan_Hanley"/>
+  <tieneEstudio rdf:resource="#Universal_Pictures"/>
+  <tieneGenero rdf:resource="#Accion"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Romance"/>
+  <tienePersonaje rdf:resource="#Alicia_Nash"/>
+  <tienePersonaje rdf:resource="#Charles_Herman"/>
+  <tienePersonaje rdf:resource="#John_Nash"/>
+  <tienePersonaje rdf:resource="#William_Parcher"/>
+  <tieneProductora rdf:resource="#Dream_works"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universal pictures</distribuidora>
+  <doblaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Español</doblaje>
+  <doblaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frances</doblaje>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.15</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2001</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accion</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romantico</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingles</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una mente brillante</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.2</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">58000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">316000000</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">la vida de un matemático john nash, quien hace contribuciones revolucionarias en su campo pero la lucha contra la esquizofrenia, afecta su vida profesional y personal</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=h_B16qD89aM</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorFotografiaER">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#El_Renacido"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mejor fotografia</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinematografía innovadora que captura la brutalidad de la naturaleza</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Leonardo_DiCaprio">
+  <rdf:type rdf:resource="#Actor"/>
+  <actorGana rdf:resource="#premioOscar_MejorActorER"/>
+  <interpretaA rdf:resource="#Hugh_Glass"/>
+  <interpretaA rdf:resource="#Jack_Dawson"/>
+  <participaEn rdf:resource="#El_Renacido"/>
+  <participaEn rdf:resource="#Titanic"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estados Unidos</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardo DiCaprio</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actuación metódica y física intensa.</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tom_Hardy">
+  <rdf:type rdf:resource="#Actor"/>
+  <interpretaA rdf:resource="#John_Fitzgerald"/>
+  <participaEn rdf:resource="#El_Renacido"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglaterra</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Hardy</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transformación camaleónica con intensidad física y psicológica.</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Richard_Roeper">
+  <rdf:type rdf:resource="#Critica"/>
+  <esSobreLaObra rdf:resource="#El_Renacido"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Renacido es una epopeya visual impresionante con una actuación visceral de Leonardo DiCaprio y una dirección magistral de Alejandro G. Iñárritu.</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard Roeper</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Alejandro_G._Iñárritu">
+  <rdf:type rdf:resource="#Director"/>
+  <directorGana rdf:resource="#premioOscar_MejorDirectorER"/>
+  <dirigeObra rdf:resource="#El_Renacido"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</edad>
+  <estiloDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narración visual inmersiva con enfoque en la naturaleza y el realismo</estiloDireccion>
+  <formacionDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad Iberoamericana</formacionDireccion>
+  <metodoDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Precisión técnica (especialmente en cámara y puesta en escena)</metodoDireccion>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alejandro G. Iñárritu</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#20th_Century_Fox">
+  <rdf:type rdf:resource="#Estudio"/>
+  <estudioDesarrolla rdf:resource="#El_Renacido"/>
+  <anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1935</anioFundacionEstudio>
+  <nombreEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th Century Fox</nombreEstudio>
+  <ubicacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles, California EE. UU.</ubicacionEstudio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Drama">
+  <rdf:type rdf:resource="#Genero"/>
+  <generoPerteneceAObra rdf:resource="#El_Renacido"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <generoPerteneceAObra rdf:resource="#Titanic"/>
+  <generoPerteneceAObra rdf:resource="#Una_mente_brillante"/>
+  <generoPerteneceAObra rdf:resource="#12_años_de_esclavitud"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas que se centran en el desarrollo emocional de personajes en situaciones realistas.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hugh_Glass">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#El_Renacido"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resistente, determinado y movido por la venganza y el amor por su hijo.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hugh Glass</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#John_Fitzgerald">
+  <rdf:type rdf:resource="#Personaje"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egoísta, despiadado y motivado por la supervivencia</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Fitzgerald</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_el_Prisionero_de_Azkaban">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <obraGana rdf:resource="#Hugo_MejorDrama_2005"/>
+  <obraGana rdf:resource="#Oscar_MejorEfectosVisuales_2005"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.42</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y el Prisionero de Azkaban</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">130000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">796688549</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry descubre la verdad sobre Sirius Black y viaja en el tiempo para salvar a su padrino.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=cUtaBkW1MKo</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BAFTA_MejorDiseñoVestuario_2006">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Diseño de Vestuario</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Diseño de Vestuario</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NationalMovieAward_MejorPelícula_2006">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película Familiar</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película Familiar</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Movie Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lily's_Theme">
+  <rdf:type rdf:resource="#Cancion"/>
+  <apareceEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</duracionCancion>
+  <generoCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banda sonora cinematográfica</generoCancion>
+  <unti:nombreCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lily's theme</unti:nombreCancion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Daniel_Radcliffe">
+  <rdf:type rdf:resource="#Actor"/>
+  <actorGana rdf:resource="#BroadwayStar_2012"/>
+  <actorGana rdf:resource="#DramaDeskAward_2008"/>
+  <actorGana rdf:resource="#MTVMovieAward_MejorHeroe_2011"/>
+  <interpretaA rdf:resource="#Harry_Potter"/>
+  <participaEn rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <participaEn rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <participaEn rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <participaEn rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <participaEn rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <participaEn rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Britanica</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Radcliffe</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escuela de teatro independiente</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Emma_Watson">
+  <rdf:type rdf:resource="#Actor"/>
+  <interpretaA rdf:resource="#Hermione_Granger"/>
+  <participaEn rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <participaEn rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <participaEn rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <participaEn rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <participaEn rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <participaEn rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33.0</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inglés</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Britanica</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emma Watson</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actriz versátil (cine y activismo)</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RalphFiennes">
+  <rdf:type rdf:resource="#Actor"/>
+  <actorGana rdf:resource="#TonyAward_MejorActor_1995"/>
+  <interpretaA rdf:resource="#Lord_Voldemort"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Britanico</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ralph Fiennes</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor clásico</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rupert_Grint">
+  <rdf:type rdf:resource="#Actor"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inglés</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Britanico</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rupert Grint</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor cómico y dramático</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tom_Felton">
+  <rdf:type rdf:resource="#Actor"/>
+  <participaEn rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inglés</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Britanico</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tom Felton</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor y músico</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#David_Yates">
+  <rdf:type rdf:resource="#Director"/>
+  <dirigeObra rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <dirigeObra rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <dirigeObra rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <dirigeObra rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <dirigeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <dirigeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</edad>
+  <estiloDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrativa visual detallada, tono oscuro y atmosférico</estiloDireccion>
+  <formacionDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad de Essex (Cine y Literatura)</formacionDireccion>
+  <metodoDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrativa visual detallada, tono oscuro y atmosférico</metodoDireccion>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Britanico</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Yates</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Warner_Bros._Pictures">
+  <rdf:type rdf:resource="#Estudio"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <estudioDesarrolla rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</anioFundacionEstudio>
+  <nombreEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</nombreEstudio>
+  <ubicacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burbank, California, EE.UU.</ubicacionEstudio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fantasia">
+  <rdf:type rdf:resource="#Genero"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas que incluyen elementos mágicos, mitológicos o sobrenaturales.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Draco_Malfoy">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <interpretadoPor rdf:resource="#Tom_Felton"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante de Slytherin, hijo de Lucius Malfoy, conflicto entre lealtad y moralidad.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Draco Malfoy</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antagonista Secundario</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <interpretadoPor rdf:resource="#Daniel_Radcliffe"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mago huérfano, hijo de James y Lily Potter, destinado a derrotar a Voldemort</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hermione_Granger">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <interpretadoPor rdf:resource="#Emma_Watson"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruja inteligente y leal, amiga cercana de Harry y Ron</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermione Granger</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lord_Voldemort">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <interpretadoPor rdf:resource="#RalphFiennes"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hechicero oscuro que busca la inmortalidad.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lord Voldemort</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ron_Weasley">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <interpretadoPor rdf:resource="#Rupert_Grint"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor amigo de Harry, valiente pero con complejo de inferioridad.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Weasley</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#WarnerBros_Pictures">
+  <rdf:type rdf:resource="#Productora"/>
+  <produce rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioFundacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</anioFundacionProductora>
+  <ubicacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burbank, California, EE.UU.</ubicacionProductora>
+  <unti:nombreProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WarnerBrosPictures</unti:nombreProductora>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PeopleChoiceAward_MejorPelícula_2010">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Película Favorita</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Película Favorita</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People's Choice Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#KidsChoiceAward_MejorPelícula_2008">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Película Favorita</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Película Favorita</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kids' Choice Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SatelliteAward_MejorEfectosVisuales_2008">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_la_Orden_del_Fénix"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejores Efectos Visuales</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejores Efectos Visuales</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satellite Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BAFTA_MejorEfectosVisuales_2012">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejores Efectos Visuales</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejores Efectos Visuales</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Saturn_MejorPelículaFantasía_2012">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película de Fantasía</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película de Fantasía</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Premio Saturn</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Suspenso">
+  <rdf:type rdf:resource="#Genero"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+  <generoPerteneceAObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas que generan tensión y expectación en el espectador.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suspenso</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PCA_MejorReparto_2012">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012.0</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reparto Cinematográfico</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">...</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PCA_MejorReparto_2012</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioBarfta_premioEspecialHP">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contribución al Cine Británico</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por el impacto cultural de la saga Harry Potter.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA Special Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioSaturn_mejorPFHP">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasía</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su conclusión épica de la saga.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saturn</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#SnoopyStyle">
+  <rdf:type rdf:resource="#Critica"/>
+  <esSobreLaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta película no podría haber sido mejor; cerró la saga de Harry Potter con broche de oro. Es un buen equilibrio con respecto a la primera parte de Las Reliquias de la Muerte. La primera parte fue más dramática, mientras que la segunda estuvo llena de acción a raudales. Puede que sea mi película favorita de la saga, aunque todas son igual de increíbles. He leído los libros y, sin duda, hay cambios importantes en la película, pero creo que encajan a la perfección con la historia, aunque no sea la trama original. Incluso para quienes no han leído los libros (¡¿por qué no?!), es igual de disfrutable. Esta película, junto con el resto de la saga, será apreciada durante años.</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SnoopyStyle</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TheLittleSongbird">
+  <rdf:type rdf:resource="#Critica"/>
+  <esSobreLaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El desenlace de la serie alcanza algunos de los puntos emotivos más intensos, principalmente debido a nuestra larga conexión con los personajes, y ofrece grandes sorpresas visuales en forma de extensas batallas mágicas. Si bien "Harry Potter y las Reliquias de la Muerte: Parte 2 (2011)" puede ser la más grande en escala y resulta entretenida, carece de profundidad, ya que algunos aspectos quedan extrañamente sin explicar, y en cambio se presenta como un tercer acto extenso. De hecho, se desarrolla como un clímax largo, sin la preparación necesaria para involucrar aún más al público, pero al menos tiene un buen ritmo y no se extiende demasiado. Un broche de oro para una serie fenomenal. 8/10</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheLittleSongbird</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#hjpog">
+  <rdf:type rdf:resource="#Critica"/>
+  <esSobreLaObra rdf:resource="#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una de las mejores series que he visto, con un final increíble. Fue un poco emotivo despedirme de todos los personajes después de 10 años.
+
+Ojalá pudiera olvidarlo todo y volver a verla. Daría lo que fuera por volver a verla en el cine.
+
+Recomendada.</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hjpog</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Globo_de_Oro">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Titanic"/>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor película</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su impacto cinematográfico y narrativo épico.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Globo de Oro</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorPT">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Titanic"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor pelicula</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su impacto cinematográfico y narrativo épico.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#James_Cameron">
+  <rdf:type rdf:resource="#Director"/>
+  <directorGana rdf:resource="#premioBAFTA_MejorDirectorPT"/>
+  <dirigeObra rdf:resource="#Titanic"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</edad>
+  <estiloDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enfoque innovador y su uso de tecnología avanzada, como cámaras 3D y efectos visuales revolucionarios</estiloDireccion>
+  <formacionDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estudio en Fullerton College</formacionDireccion>
+  <metodoDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meticuloso y perfeccionista, involucrándose profundamente en todos los aspectos de la producción, desde la escritura del guion hasta la edición final</metodoDireccion>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Cameron</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Universal_Pictures">
+  <rdf:type rdf:resource="#Estudio"/>
+  <estudioDesarrolla rdf:resource="#Titanic"/>
+  <estudioDesarrolla rdf:resource="#Una_mente_brillante"/>
+  <anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</anioFundacionEstudio>
+  <nombreEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universal Pictures</nombreEstudio>
+  <ubicacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">universal studios california</ubicacionEstudio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Romance">
+  <rdf:type rdf:resource="#Genero"/>
+  <generoPerteneceAObra rdf:resource="#Titanic"/>
+  <generoPerteneceAObra rdf:resource="#Una_mente_brillante"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas que se centran en relaciones amorosas y sentimentales entre personajes.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romance</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jack_Dawson">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Titanic"/>
+  <interpretadoPor rdf:resource="#Leonardo_DiCaprio"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joven artista pobre que gana un pasaje en el Titanic y se enamora de Rose</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Dawson</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorGuionUMB">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Una_mente_brillante"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Guión Original</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fue galardonado por adaptar con sensibilidad la vida de John Nash</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorPeliculaUMB">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Una_mente_brillante"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Pelicula</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor producción cinematográfica del año por su fuerte impacto emocional.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ed_Harris">
+  <rdf:type rdf:resource="#Actor"/>
+  <participaEn rdf:resource="#Una_mente_brillante"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estados Unidos</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Harris</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor intenso y físico</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jennifer_Connelly">
+  <rdf:type rdf:resource="#Actor"/>
+  <actorGana rdf:resource="#premioOscar_MejorActrizUMB"/>
+  <interpretaA rdf:resource="#Alicia_Nash"/>
+  <participaEn rdf:resource="#Una_mente_brillante"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estados Unidos</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennifer Connelly</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actriz dramática versátil</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Paul_Bettany">
+  <rdf:type rdf:resource="#Actor"/>
+  <interpretaA rdf:resource="#Charles_Herman"/>
+  <participaEn rdf:resource="#Una_mente_brillante"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Británico</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Bettany</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor carismático y expresivo</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Russell_Crowe">
+  <rdf:type rdf:resource="#Actor"/>
+  <interpretaA rdf:resource="#John_Nash"/>
+  <participaEn rdf:resource="#Una_mente_brillante"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.0</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">español</idiomaActor>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russell Crowe</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Método actoral intenso</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#James_Horner">
+  <rdf:type rdf:resource="#BandaSonora"/>
+  <tieneCancion rdf:resource="#A_Klaeidoskope"/>
+  <tieneCancion rdf:resource="#My_Heart_Will_Go_On"/>
+  <nombreBanda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Horner</nombreBanda>
+  <unti:generoMusica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banda Sonora orquestal</unti:generoMusica>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Edward_Guthmann">
+  <rdf:type rdf:resource="#Critica"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">una conmovedora y brillante representación de la genialidad y la lucha contra la esquizofrenia.</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Guthmann</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.2</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ron_Howard">
+  <rdf:type rdf:resource="#Director"/>
+  <directorGana rdf:resource="#premioOscar_MejorDirectorUMB"/>
+  <dirigeObra rdf:resource="#Una_mente_brillante"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</edad>
+  <estiloDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrativo clásico</estiloDireccion>
+  <formacionDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad del Sur de California</formacionDireccion>
+  <metodoDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colaborativo y muy respetuoso con sus equipos</metodoDireccion>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estados Unidos</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Howard</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mike_Hill_y_Dan_Hanley">
+  <rdf:type rdf:resource="#Edicion"/>
+  <TecnicaEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corte clásico con transiciones sutiles para diferenciar la realidad y alucinaciones</TecnicaEdicion>
+  <unti:encargadoEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Hill y Dan Hanley</unti:encargadoEdicion>
+  <unti:softwareEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avid</unti:softwareEdicion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Alicia_Nash">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Una_mente_brillante"/>
+  <interpretadoPor rdf:resource="#Jennifer_Connelly"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante de la universidad MIT alumna de john nash y posteriormente su esposa.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicia Nash</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Charles_Herman">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Una_mente_brillante"/>
+  <interpretadoPor rdf:resource="#Paul_Bettany"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Herman es un personaje imaginario creado por la mente de John Nash.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Herman</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#John_Nash">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Una_mente_brillante"/>
+  <interpretadoPor rdf:resource="#Russell_Crowe"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estudiante de la universidad MIT alumna de john nash y posteriormente su esposa.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Nash</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#William_Parcher">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#Una_mente_brillante"/>
+  <interpretadoPor rdf:resource="#Ed_Harris"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Parcher es un personaje ficticio producto de las alucinaciones de John Nash.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Parcher</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dream_works">
+  <rdf:type rdf:resource="#Productora"/>
+  <produce rdf:resource="#Una_mente_brillante"/>
+  <anioFundacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1912</anioFundacionProductora>
+  <ubicacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">universal studios california</ubicacionProductora>
+  <unti:nombreProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dream works</unti:nombreProductora>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorActorER">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Leonardo_DiCaprio"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Actor de la película</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Impactante interpretación de un hombre luchando contra la naturaleza y la traición</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorDirectorER">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaDirector rdf:resource="#Alejandro_G._Iñárritu"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mejor director de la pelicula</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dirección excepcional en la narración de una historia épica y visualmente impresionante</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_la_Cámara_Secreta">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <esSecuelaDe rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <obraGana rdf:resource="#Empire_Award_MejorPelícula_2003"/>
+  <obraGana rdf:resource="#Saturn_MejorPelículaFantasía_2003"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <tienePersonaje rdf:resource="#Ron_Weasley"/>
+  <tieneProductora rdf:resource="#WarnerBros_Pictures"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.61</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y la Cámara Secreta</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">100000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">878979634</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry investiga el misterio de la Cámara Secreta y enfrenta al basilisco que petrifica a los estudiantes.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=MziLH3uow6E</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Harry_Potter_y_la_Piedra_Filosofal">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <esPrecuelaDe rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <obraGana rdf:resource="#BAFTA_MejorDiseñoProduccion_2002"/>
+  <obraGana rdf:resource="#Oscar_MejorBandaSonora_2002"/>
+  <obraTieneCancion rdf:resource="#Lily's_Theme"/>
+  <tieneActor rdf:resource="#Daniel_Radcliffe"/>
+  <tieneActor rdf:resource="#Emma_Watson"/>
+  <tieneActor rdf:resource="#Ron_Weasley"/>
+  <tieneActor rdf:resource="#Rupert_Grint"/>
+  <tieneActor rdf:resource="#Tom_Felton"/>
+  <tieneDirector rdf:resource="#David_Yates"/>
+  <tieneEstudio rdf:resource="#Warner_Bros._Pictures"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Fantasia"/>
+  <tienePersonaje rdf:resource="#Draco_Malfoy"/>
+  <tienePersonaje rdf:resource="#Harry_Potter"/>
+  <tienePersonaje rdf:resource="#Hermione_Granger"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warner Bros. Pictures</distribuidora>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.52</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglés</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter y la Piedra Filosofal</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">125000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">974755371</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter descubre que es un mago y comienza su educación en Hogwarts, donde lucha contra el maligno Voldemort.</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=ZgrCZVjPg9g</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#12_años_de_esclavitud">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <obraGana rdf:resource="#premioOscar_pelicula12"/>
+  <obraTieneCancion rdf:resource="#Solomon"/>
+  <tieneActor rdf:resource="#Chiwetel_Ejiofor"/>
+  <tieneActor rdf:resource="#Lupita_Nyong'o"/>
+  <tieneBandaSonora rdf:resource="#Hans_Zimmer"/>
+  <tieneCritica rdf:resource="#Manohla_Dargis"/>
+  <tieneDirector rdf:resource="#Steve_McQueen"/>
+  <tieneEdicion rdf:resource="#Joe_Walker"/>
+  <tieneEstudio rdf:resource="#Fox_Searchlight_Pictures"/>
+  <tieneGenero rdf:resource="#Drama"/>
+  <tieneGenero rdf:resource="#Historico"/>
+  <tienePersonaje rdf:resource="#Patsey"/>
+  <tienePersonaje rdf:resource="#Solomon_Northup"/>
+  <tieneProductora rdf:resource="#River_Road_Entertainment"/>
+  <cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cgi>
+  <distribuidora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox Searchlight Pictures</distribuidora>
+  <doblaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">español</doblaje>
+  <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.13</duracion>
+  <estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</estreno>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero>
+  <genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Historia</genero>
+  <lenguajeNativo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</lenguajeNativo>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 años de esclavitud</nombreObra>
+  <popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7</popularidad>
+  <precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</precuela>
+  <presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20000000</presupuesto>
+  <recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">187000000</recaudacion>
+  <secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</secuela>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La increíble historia real de Solomon Northup, un hombre libre que fue secuestrado y vendido como esclavo</sinopsis>
+  <tipo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Largometraje</tipo>
+  <trailer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=SchhZHRtNiA</trailer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hugo_MejorDrama_2005">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Presentación Dramática</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Presentación Dramática</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Premio Hugo</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oscar_MejorEfectosVisuales_2005">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejores Efectos Visuales</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejores Efectos Visuales</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Premio Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BroadwayStar_2012">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Daniel_Radcliffe"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reconocimiento a Trayectoria Teatral</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reconocimiento a Trayectoria Teatral</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrella Emergente de Broadway</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DramaDeskAward_2008">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Daniel_Radcliffe"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor actor en Teatro</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor actor en Teatro
+rolDeActuacion: "Alan Strang (Equus)"</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama Desk Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MTVMovieAward_MejorHeroe_2011">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Daniel_Radcliffe"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Héroe</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Héroe
+rolDeActuacion: "Harry Potter"  
+generoDeActuacion: "Fantasía"</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Movie Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#TonyAward_MejorActor_1995">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#RalphFiennes"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Actor en una Obra de Teatro</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Actor en una Obra de Teatro
+rolDeActuacion: "Hamlet"</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tony Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioBAFTA_MejorDirectorPT">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaDirector rdf:resource="#James_Cameron"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Director de Película</categoriaPremio>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorActrizUMB">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Jennifer_Connelly"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Actriz de reparto</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Su actuación como la esposa de John Nash fue destacada por su autenticidad.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#My_Heart_Will_Go_On">
+  <rdf:type rdf:resource="#Cancion"/>
+  <duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.4</duracionCancion>
+  <generoCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balada pop</generoCancion>
+  <unti:nombreCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My Heart Will Go On</unti:nombreCancion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_MejorDirectorUMB">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaDirector rdf:resource="#Ron_Howard"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Director de película</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su dirección magistral que combinó elementos psicológicos.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Alexandre_Desplat">
+  <rdf:type rdf:resource="#BandaSonora"/>
+  <tieneCancion rdf:resource="#Lily's_Theme"/>
+  <nombreBanda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexandre desplat</nombreBanda>
+  <unti:generoMusica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banda Sonora Orquestal</unti:generoMusica>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Animacion">
+  <rdf:type rdf:resource="#Genero"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas creadas mediante técnicas de animación en lugar de filmación con actores reales.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animación</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aventura">
+  <rdf:type rdf:resource="#Genero"/>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aventura</nombreGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas con viajes emocionantes, búsquedas y descubrimientos.</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#BAFTA_MejorDiseñoProduccion_2002">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Diseño de Producción</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al mejor diseño de produccion</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oscar_MejorBandaSonora_2002">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_la_Piedra_Filosofal"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Banda Sonora</categoriaPremio>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partitura de John Williams</categoriaPremio>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Premio Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Empire_Award_MejorPelícula_2003">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empire Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Saturn_MejorPelículaFantasía_2003">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#Harry_Potter_y_la_Cámara_Secreta"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película de Fantasía</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor pelicula de Fantasía</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Premio Saturn</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CJ_Entertainment">
+  <rdf:type rdf:resource="#Estudio"/>
+  <anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</anioFundacionEstudio>
+  <nombreEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CJ Entertainment</nombreEstudio>
+  <ubicacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seúl, Corea del Sur</ubicacionEstudio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cal_Hockley">
+  <rdf:type rdf:resource="#Personaje"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inteligente y astuto , Ki-woo esta decidido a mejorar la situacion economica de su familia. A traves de engaños y manipulacion</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cal Hockley</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chiwetel_Ejiofor">
+  <rdf:type rdf:resource="#Actor"/>
+  <actorGana rdf:resource="#premioBAFTA_MejorActor"/>
+  <interpretaA rdf:resource="#Solomon_Northup"/>
+  <participaEn rdf:resource="#12_años_de_esclavitud"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">47.0</edad>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reino Unido</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiwetel Ejiofor</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Método actoral intenso</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioBAFTA_MejorActor">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Chiwetel_Ejiofor"/>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Actor</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su impresionante interpretación de Solomon Northup, capturando la lucha interna y externa del personaje</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Solomon_Northup">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#12_años_de_esclavitud"/>
+  <interpretadoPor rdf:resource="#Chiwetel_Ejiofor"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un hombre libre que es secuestrado y vendido como esclavo, luchando por recuperar su libertad</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solomon Northup</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_pelicula12">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaObra rdf:resource="#12_años_de_esclavitud"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014.0</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Película</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su representación de la historia de Solomon Northup y su lucha por la libertad</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Solomon">
+  <rdf:type rdf:resource="#Cancion"/>
+  <apareceEn rdf:resource="#12_años_de_esclavitud"/>
+  <duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</duracionCancion>
+  <generoCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banda sonora</generoCancion>
+  <unti:nombreCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solomon</unti:nombreCancion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lupita_Nyong'o">
+  <rdf:type rdf:resource="#Actor"/>
+  <actorGana rdf:resource="#premioOscar_ActrizReparto"/>
+  <interpretaA rdf:resource="#Patsey"/>
+  <participaEn rdf:resource="#12_años_de_esclavitud"/>
+  <idiomaActor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ingles</idiomaActor>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">México/Kenia</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lupita Nyong'o</nombre>
+  <tipoActuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Método actoral emocional</tipoActuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hans_Zimmer">
+  <rdf:type rdf:resource="#BandaSonora"/>
+  <tieneCancion rdf:resource="#Solomon"/>
+  <nombreBanda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Zimmer</nombreBanda>
+  <unti:generoMusica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clásica y ambiental</unti:generoMusica>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Manohla_Dargis">
+  <rdf:type rdf:resource="#Critica"/>
+  <esSobreLaObra rdf:resource="#12_años_de_esclavitud"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 Años de Esclavitud es una obra de gran intensidad emocional que presenta un retrato brutalmente realista de la esclavitud en Estados Unidos.</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manohla Dargis</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Steve_McQueen">
+  <rdf:type rdf:resource="#Director"/>
+  <dirigeObra rdf:resource="#12_años_de_esclavitud"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</edad>
+  <estiloDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrativa intensa, explorando los aspectos más oscuros de la condición humana.</estiloDireccion>
+  <formacionDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universidad de Arte de Londres</formacionDireccion>
+  <metodoDireccion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enfoque visceral y crudo</metodoDireccion>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reino Unido</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve McQueen</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Joe_Walker">
+  <rdf:type rdf:resource="#Edicion"/>
+  <seAplicaAObra rdf:resource="#12_años_de_esclavitud"/>
+  <TecnicaEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montaje lineal con énfasis en las emociones y el desarrollo de los personajes</TecnicaEdicion>
+  <unti:encargadoEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Walker</unti:encargadoEdicion>
+  <unti:softwareEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avid Media Composer</unti:softwareEdicion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fox_Searchlight_Pictures">
+  <rdf:type rdf:resource="#Estudio"/>
+  <estudioDesarrolla rdf:resource="#12_años_de_esclavitud"/>
+  <anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1927.0</anioFundacionEstudio>
+  <nombreEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox Searchlight Pictures</nombreEstudio>
+  <ubicacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles, California, EE. UU.</ubicacionEstudio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Historico">
+  <rdf:type rdf:resource="#Genero"/>
+  <generoPerteneceAObra rdf:resource="#12_años_de_esclavitud"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas basadas en eventos históricos reales o que recrean períodos históricos.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Historico</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Patsey">
+  <rdf:type rdf:resource="#Personaje"/>
+  <esParteDeObra rdf:resource="#12_años_de_esclavitud"/>
+  <interpretadoPor rdf:resource="#Lupita_Nyong'o"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una esclava joven y brillante que es objeto de abuso y amor imposible bajo las condiciones brutales del campo de trabajo</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patsey</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">personaje principal secundario</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#River_Road_Entertainment">
+  <rdf:type rdf:resource="#Productora"/>
+  <produce rdf:resource="#12_años_de_esclavitud"/>
+  <anioFundacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</anioFundacionProductora>
+  <ubicacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Ángeles, California</ubicacionProductora>
+  <unti:nombreProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#string">River Road Entertainment</unti:nombreProductora>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_ActrizReparto">
+  <premioSeEntregaActor rdf:resource="#Lupita_Nyong'o"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Actriz de Reparto</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Por su conmovedora y desgarradora interpretación de Patsey, una esclava sufriente y valiente</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Chung-sook">
+  <rdf:type rdf:resource="#Personaje"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ingeniosa, segura de sí misma y muy talentosa, Ki-jung es la más audaz de la familia.</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung-sook</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CienciaFiccion">
+  <rdf:type rdf:resource="#Genero"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas que exploran conceptos futuristas, tecnología avanzada, espacio exterior o principios científicos imaginarios.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciencia Ficcion</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Comedia">
+  <rdf:type rdf:resource="#Genero"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas diseñadas para provocar risa y entretenimiento, a menudo con situaciones absurdas o humorísticas.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedia</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Crimen">
+  <rdf:type rdf:resource="#Genero"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas centradas en actividades criminales, su investigación y resolución.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crimen</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Detectives_Corruptos">
+  <rdf:type rdf:resource="#Serie"/>
+  <obraGana rdf:resource="#premioEmmy_MejorSerieDC"/>
+  <CantidadCapitulo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</CantidadCapitulo>
+  <cantidadTemporada rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</cantidadTemporada>
+  <estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en Produccion</estado>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detectives Corruptos</nombreObra>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioEmmy_MejorSerieDC">
+  <rdf:type rdf:resource="#Premio"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Serie</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fue muy influyente en el renacimiento del formato antológico para televisión.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emmy</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jessica_Kiang">
+  <rdf:type rdf:resource="#Critica"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parasite es una obra maestra del cine moderno que fusiona magistralmente la comedia negra, el thriller y el drama social.</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessica Kiang</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Jung_Jae-il">
+  <rdf:type rdf:resource="#BandaSonora"/>
+  <tieneCancion rdf:resource="#The_Belt_of_Faith"/>
+  <nombreBanda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jung Jae-il</nombreBanda>
+  <unti:generoMusica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clásica, ambiental</unti:generoMusica>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#The_Belt_of_Faith">
+  <rdf:type rdf:resource="#Cancion"/>
+  <duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.38</duracionCancion>
+  <generoCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banda sonora</generoCancion>
+  <unti:nombreCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Belt of Faith</unti:nombreCancion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kate_Winslet">
+  <rdf:type rdf:resource="#Actor"/>
+  <anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</anioTrayectoria>
+  <edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</edad>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inglaterra</nacionalidad>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kate Winslet</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kim_Ki-woo">
+  <rdf:type rdf:resource="#Personaje"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inteligente y astuto, Ki-woo está decidido a mejorar la situación económica de su familia. A través de engaños y manipulación</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim Ki-woo</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#La_cala">
+  <rdf:type rdf:resource="#Documental"/>
+  <obraGana rdf:resource="#premioOscar_mejorDocumentalLC"/>
+  <enfoque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activistas y ex entrenadores de delfines se infiltran en Taiji para documentar la matanza.</enfoque>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La cala</nombreObra>
+  <objetivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exponer la crueldad de la caza de delfines y presionar por su fin</objetivo>
+  <tema rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caza de delfines en japón</tema>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioOscar_mejorDocumentalLC">
+  <rdf:type rdf:resource="#Premio"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Documental</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ampliamente reconocido en el circuito de festivales por su enfoque humano y profundo.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oscar</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#MTVMovieAward_MejorVillano_2010">
+  <rdf:type rdf:resource="#Premio"/>
+  <premioSeEntregaActor rdf:resource="#Tom_Felton"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Villano</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Villano</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Movie Award</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Musical">
+  <rdf:type rdf:resource="#Genero"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas que incorporan canciones y coreografías como elemento narrativo fundamental.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Park_Dong-ik">
+  <rdf:type rdf:resource="#Personaje"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elitista y reservado, Park Dong-ik es un hombre que se siente completamente ajeno a las luchas de la clase baja</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park Dong-ik</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pequenias_Mentiras_grandes">
+  <rdf:type rdf:resource="#Serie"/>
+  <obraGana rdf:resource="#premioEmmy_MejorMiniseriePMG"/>
+  <CantidadCapitulo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</CantidadCapitulo>
+  <cantidadTemporada rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cantidadTemporada>
+  <estado rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminada</estado>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pequeñas Mentiras grandes</nombreObra>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioEmmy_MejorMiniseriePMG">
+  <rdf:type rdf:resource="#Premio"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Miniserie</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fue aclamada por su guion profundo y su enfoque en temas como la violencia doméstica, el abuso y la sororidad.</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pequenias Mentiras Grandes</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Peter_Travers">
+  <rdf:type rdf:resource="#Critica"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Un espectáculo visual y emocionalmente arrollador</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Travers</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Roger_ebert">
+  <rdf:type rdf:resource="#Critica"/>
+  <DescripcionCritica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">un final épico y emocional para la saga</DescripcionCritica>
+  <unti:nombreCritico rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roger ebert</unti:nombreCritico>
+  <unti:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</unti:puntuacion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rose_DeWhit_Bukater">
+  <rdf:type rdf:resource="#Personaje"/>
+  <descripcionPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joven aristocrata atrapada en un compromiso infeliz que encuentra el amor con jack</descripcionPersonaje>
+  <nombrePersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose Dewhit Bukater</nombrePersonaje>
+  <rolPersonaje rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protagonista</rolPersonaje>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stephen_Mirrione">
+  <rdf:type rdf:resource="#Edicion"/>
+  <TecnicaEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montaje con tomas largas y un flujo narrativo inmersivo.</TecnicaEdicion>
+  <unti:encargadoEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen Mirrione</unti:encargadoEdicion>
+  <unti:softwareEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adobe Premiere Pro</unti:softwareEdicion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Terror">
+  <rdf:type rdf:resource="#Genero"/>
+  <descripcionGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Películas creadas para provocar miedo, sustos y tensión en la audiencia.</descripcionGenero>
+  <nombreGenero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terror</nombreGenero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#The_Revenant_Main_Theme">
+  <rdf:type rdf:resource="#Cancion"/>
+  <duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.12</duracionCancion>
+  <generoCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banda Sonora</generoCancion>
+  <unti:nombreCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Revenant Main Theme</unti:nombreCancion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Twenty_Century_Fox">
+  <rdf:type rdf:resource="#Estudio"/>
+  <anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1935</anioFundacionEstudio>
+  <nombreEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Twenty Century Fox</nombreEstudio>
+  <ubicacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Ángeles, California, EE. UU.</ubicacionEstudio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Yang_Jin-mo">
+  <rdf:type rdf:resource="#Edicion"/>
+  <TecnicaEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montaje preciso con transiciones fluidas y un ritmo narrativo que intensifica la tensión y el drama</TecnicaEdicion>
+  <unti:encargadoEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang Jin-mo</unti:encargadoEdicion>
+  <unti:softwareEdicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software: Avid Media Composer</unti:softwareEdicion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#premioBAFTA_mejorDocumental13th">
+  <rdf:type rdf:resource="#Premio"/>
+  <anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</anioEntrega>
+  <categoriaPremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mejor Documental</categoriaPremio>
+  <motivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ha sido ampliamente reconocido por su análisis profundo del sistema penitenciario</motivo>
+  <nombrePremio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAFTA</nombrePremio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#13th">
+  <rdf:type rdf:resource="#Documental"/>
+  <obraGana rdf:resource="#premioBAFTA_mejorDocumental13th"/>
+  <enfoque rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Analiza la 13ª Enmienda y su relación con el sistema penitenciario</enfoque>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13th</nombreObra>
+  <objetivo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generar conciencia sobre la desigualdad racial en el sistema legal</objetivo>
+  <tema rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Racismo sistémico y encarcelamiento masivo en EE.UU.</tema>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ryuichi_Sakamoto_&amp;_Alva_Noto">
+  <rdf:type rdf:resource="#BandaSonora"/>
+  <tieneCancion rdf:resource="#The_Revenant_Main_Theme"/>
+  <nombreBanda rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryuichi Sakamoto &amp; Alva Noto</nombreBanda>
+  <unti:generoMusica rdf:datatype="http://www.w3.org/2001/XMLSchema#string">música ambiental, experimental</unti:generoMusica>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#actor1">
+  <rdf:type rdf:resource="#Actor"/>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor Prueba</nombre>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pelicula1">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inception</nombreObra>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#actor2">
+  <rdf:type rdf:resource="#Actor"/>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor Prueba1</nombre>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An American actor and film producer.</nacionalidad>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pelicula2">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelicula1</nombreObra>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A science fiction action film written and directed by Christopher Nolan.</sinopsis>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#actor3">
+  <rdf:type rdf:resource="#Actor"/>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor Prueba1</nombre>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An American actor and film producer.</nacionalidad>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pelicula3">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelicula1</nombreObra>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A science fiction action film written and directed by Christopher Nolan.</sinopsis>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#actor4">
+  <rdf:type rdf:resource="#Actor"/>
+  <nombre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actor Prueba1</nombre>
+  <nacionalidad rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An American actor and film producer.</nacionalidad>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pelicula4">
+  <rdf:type rdf:resource="#Pelicula"/>
+  <nombreObra rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pelicula1</nombreObra>
+  <sinopsis rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A science fiction action film written and directed by Christopher Nolan.</sinopsis>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Documental"/>
+    <rdf:Description rdf:about="#Pelicula"/>
+    <rdf:Description rdf:about="#Serie"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
