@@ -1,0 +1,3218 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mejia/cine/"
+     xml:base="http://www.semanticweb.org/mejia/cine/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cine="http://www.semanticweb.org/mejia/cine#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mejia/cine"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#actorGana -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#actorGana">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#premioSeEntregaActor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#apareceEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#apareceEn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#obraTieneCancion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#directorGana -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#directorGana">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#premioSeEntregaDirector"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#dirigeObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#dirigeObra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneDirector"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#esBandaSonoraDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#esBandaSonoraDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneBandaSonora"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#esParteDeObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#esParteDeObra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tienePersonaje"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#esPrecuelaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#esPrecuelaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#esSecuelaDe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#esSecuelaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#esSecuelaDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#esSobreLaObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#esSobreLaObra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneCritica"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#estudioDesarrolla -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#estudioDesarrolla">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneEstudio"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#generoPerteneceAObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#generoPerteneceAObra">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneGenero"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#interpretaA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#interpretaA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#interpretadoPor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#interpretadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#interpretadoPor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#obraGana -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#obraGana">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#premioSeEntregaObra"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#obraTieneCancion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#obraTieneCancion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#participaEn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#participaEn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneActor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#perteneceA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#perteneceA">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneCancion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioSeEntregaActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#premioSeEntregaActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioSeEntregaDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#premioSeEntregaDirector">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioSeEntregaObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#premioSeEntregaObra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#produce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#produce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneProductora"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#seAplicaAObra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#seAplicaAObra">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mejia/cine#tieneEdicion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneActor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneBandaSonora -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneBandaSonora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneCancion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneCancion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneCritica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneCritica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneDirector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneDirector">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneEdicion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneEstudio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneEstudio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tienePersonaje -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tienePersonaje">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tieneProductora -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mejia/cine#tieneProductora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#CantidadCapitulo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#CantidadCapitulo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Serie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#DescripcionCritica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#DescripcionCritica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#TecnicaEdicion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#TecnicaEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#anioEntrega -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#anioEntrega">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#anioFundacionEstudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#anioFundacionEstudio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#anioFundacionProductora -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#anioFundacionProductora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#anioTrayectoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#anioTrayectoria">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#cantidadTemporada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#cantidadTemporada">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Serie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#categoriaPremio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#categoriaPremio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#cgi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#cgi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#descripcionGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#descripcionGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#descripcionPersonaje -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#descripcionPersonaje">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#distribuidora -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#distribuidora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#doblaje -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#doblaje">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#duracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#duracion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#duracionCancion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#duracionCancion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#edad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#edad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#enfoque -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#enfoque">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Documental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#estado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#estado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Serie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#estiloDireccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#estiloDireccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#estreno -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#estreno">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#formacionDireccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#formacionDireccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#genero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#genero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#generoCancion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#generoCancion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#idiomaActor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#idiomaActor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#lenguajeNativo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#lenguajeNativo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#metodoDireccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#metodoDireccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#motivo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#motivo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nacionalidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nacionalidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombreBanda -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombreBanda">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombreEstudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombreEstudio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombreGenero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombreGenero">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombreObra -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombreObra">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombrePersonaje -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombrePersonaje">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#nombrePremio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#nombrePremio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#objetivo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#objetivo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Documental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#popularidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#popularidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#precuela -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#precuela">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#presupuesto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#presupuesto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#long">40000</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#recaudacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#recaudacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#long">10000</xsd:minExclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#rolPersonaje -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#rolPersonaje">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#secuela -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#secuela">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#sinopsis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#sinopsis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tema -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#tema">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Documental"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tipo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#tipo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#tipoActuacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#tipoActuacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#trailer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#trailer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#ubicacionEstudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#ubicacionEstudio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#ubicacionProductora -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mejia/cine#ubicacionProductora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#encargadoEdicion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#encargadoEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#generoMusica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#generoMusica">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreCancion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreCancion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreCritico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreCritico">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreProductora -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#nombreProductora">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#puntuacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#puntuacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#softwareEdicion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/2/untitled-ontology-3#softwareEdicion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#BandaSonora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Cancion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Cancion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Critica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Critica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Documental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Documental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Edicion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Edicion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Estudio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Estudio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Genero"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Obra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Obra"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Pelicula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Pelicula">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#PersonaCinematografica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#PersonaCinematografica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Personaje -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Personaje"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Premio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Premio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Productora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Productora"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mejia/cine#Serie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mejia/cine#Obra"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#A_Klaeidoskope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#A_Klaeidoskope">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <cine:duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</cine:duracionCancion>
+        <cine:generoCancion>banda sonora dramática</cine:generoCancion>
+        <untitled-ontology-3:nombreCancion>A Kaeidoskope</untitled-ontology-3:nombreCancion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Accion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Accion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:descripcionGenero>Películas caracterizadas por escenas de violencia, persecuciones, combates y altos niveles de energía.</cine:descripcionGenero>
+        <cine:nombreGenero>Accion</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Alejandro_G._Iñárritu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Alejandro_G._Iñárritu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <cine:directorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorDirectorER"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</cine:edad>
+        <cine:estiloDireccion>Narración visual inmersiva con enfoque en la naturaleza y el realismo</cine:estiloDireccion>
+        <cine:formacionDireccion>Universidad Iberoamericana</cine:formacionDireccion>
+        <cine:metodoDireccion>Precisión técnica (especialmente en cámara y puesta en escena)</cine:metodoDireccion>
+        <cine:nacionalidad>Mexico</cine:nacionalidad>
+        <cine:nombre>Alejandro G. Iñárritu</cine:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Alexandre_Desplat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Alexandre_Desplat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <cine:tieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:nombreBanda>Alexandre desplat</cine:nombreBanda>
+        <untitled-ontology-3:generoMusica>Banda Sonora Orquestal</untitled-ontology-3:generoMusica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Alicia_Nash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Alicia_Nash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Jennifer_Connelly"/>
+        <cine:descripcionPersonaje>Estudiante de la universidad MIT alumna de john nash y posteriormente su esposa.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Alicia Nash</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Animacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Animacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:descripcionGenero>Películas creadas mediante técnicas de animación en lugar de filmación con actores reales.</cine:descripcionGenero>
+        <cine:nombreGenero>Animación</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Aventura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Aventura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:nombreGenero>Aventura</cine:nombreGenero>
+        <cine:nombreGenero>Películas con viajes emocionantes, búsquedas y descubrimientos.</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#BAFTA_MejorDiseñoProduccion_2002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#BAFTA_MejorDiseñoProduccion_2002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Diseño de Producción</cine:categoriaPremio>
+        <cine:motivo>Al mejor diseño de produccion</cine:motivo>
+        <cine:nombrePremio>BAFTA</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#BAFTA_MejorDiseñoVestuario_2006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#BAFTA_MejorDiseñoVestuario_2006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Diseño de Vestuario</cine:categoriaPremio>
+        <cine:motivo>Mejor Diseño de Vestuario</cine:motivo>
+        <cine:nombrePremio>BAFTA</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#BAFTA_MejorEfectosVisuales_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#BAFTA_MejorEfectosVisuales_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</cine:anioEntrega>
+        <cine:categoriaPremio>Mejores Efectos Visuales</cine:categoriaPremio>
+        <cine:motivo>Mejores Efectos Visuales</cine:motivo>
+        <cine:nombrePremio>BAFTA</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#BroadwayStar_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#BroadwayStar_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</cine:anioEntrega>
+        <cine:categoriaPremio>Reconocimiento a Trayectoria Teatral</cine:categoriaPremio>
+        <cine:motivo>Reconocimiento a Trayectoria Teatral</cine:motivo>
+        <cine:nombrePremio>Estrella Emergente de Broadway</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#CJ_Entertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#CJ_Entertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <cine:anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</cine:anioFundacionEstudio>
+        <cine:nombreEstudio>CJ Entertainment</cine:nombreEstudio>
+        <cine:ubicacionEstudio>Seúl, Corea del Sur</cine:ubicacionEstudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Cal_Hockley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Cal_Hockley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:descripcionPersonaje>Inteligente y astuto , Ki-woo esta decidido a mejorar la situacion economica de su familia. A traves de engaños y manipulacion</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Cal Hockley</cine:nombrePersonaje>
+        <cine:rolPersonaje>Antagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Charles_Herman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Charles_Herman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Paul_Bettany"/>
+        <cine:descripcionPersonaje>Charles Herman es un personaje imaginario creado por la mente de John Nash.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Charles Herman</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Chiwetel_Ejiofor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Chiwetel_Ejiofor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioBAFTA_MejorActor"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Solomon_Northup"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">47</cine:edad>
+        <cine:idiomaActor>ingles</cine:idiomaActor>
+        <cine:nacionalidad>Reino Unido</cine:nacionalidad>
+        <cine:nombre>Chiwetel Ejiofor</cine:nombre>
+        <cine:tipoActuacion>Método actoral intenso</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Chung-sook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Chung-sook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:descripcionPersonaje>Ingeniosa, segura de sí misma y muy talentosa, Ki-jung es la más audaz de la familia.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Chung-sook</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#CienciaFiccion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#CienciaFiccion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:descripcionGenero>Películas que exploran conceptos futuristas, tecnología avanzada, espacio exterior o principios científicos imaginarios.</cine:descripcionGenero>
+        <cine:nombreGenero>Ciencia Ficcion</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Comedia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Comedia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:descripcionGenero>Películas diseñadas para provocar risa y entretenimiento, a menudo con situaciones absurdas o humorísticas.</cine:descripcionGenero>
+        <cine:nombreGenero>Comedia</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Crimen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Crimen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:descripcionGenero>Películas centradas en actividades criminales, su investigación y resolución.</cine:descripcionGenero>
+        <cine:nombreGenero>Crimen</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#BroadwayStar_2012"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#DramaDeskAward_2008"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#MTVMovieAward_MejorHeroe_2011"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</cine:edad>
+        <cine:idiomaActor>Inglés</cine:idiomaActor>
+        <cine:nacionalidad>Britanica</cine:nacionalidad>
+        <cine:nombre>Daniel Radcliffe</cine:nombre>
+        <cine:tipoActuacion>Escuela de teatro independiente</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#David_Yates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#David_Yates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</cine:edad>
+        <cine:estiloDireccion>Narrativa visual detallada, tono oscuro y atmosférico</cine:estiloDireccion>
+        <cine:formacionDireccion>Universidad de Essex (Cine y Literatura)</cine:formacionDireccion>
+        <cine:metodoDireccion>Narrativa visual detallada, tono oscuro y atmosférico</cine:metodoDireccion>
+        <cine:nacionalidad>Britanico</cine:nacionalidad>
+        <cine:nombre>David Yates</cine:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Draco_Malfoy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Draco_Malfoy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:descripcionPersonaje>Estudiante de Slytherin, hijo de Lucius Malfoy, conflicto entre lealtad y moralidad.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Draco Malfoy</cine:nombrePersonaje>
+        <cine:rolPersonaje>Antagonista Secundario</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:descripcionGenero>Películas que se centran en el desarrollo emocional de personajes en situaciones realistas.</cine:descripcionGenero>
+        <cine:nombreGenero>Drama</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#DramaDeskAward_2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#DramaDeskAward_2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor actor en Teatro</cine:categoriaPremio>
+        <cine:motivo>Mejor actor en Teatro
+rolDeActuacion: &quot;Alan Strang (Equus)&quot;</cine:motivo>
+        <cine:nombrePremio>Drama Desk Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Dream_works -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Dream_works">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <cine:produce rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioFundacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1912</cine:anioFundacionProductora>
+        <cine:ubicacionProductora>universal studios california</cine:ubicacionProductora>
+        <untitled-ontology-3:nombreProductora>Dream works</untitled-ontology-3:nombreProductora>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Ed_Harris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Ed_Harris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</cine:edad>
+        <cine:idiomaActor>Ingles</cine:idiomaActor>
+        <cine:nacionalidad>Estados Unidos</cine:nacionalidad>
+        <cine:nombre>Ed Harris</cine:nombre>
+        <cine:tipoActuacion>Actor intenso y físico</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Edward_Guthmann -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Edward_Guthmann">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:DescripcionCritica>una conmovedora y brillante representación de la genialidad y la lucha contra la esquizofrenia.</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>Edward Guthmann</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.2</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#El_Renacido -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#El_Renacido">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorFotografiaER"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Leonardo_DiCaprio"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Hardy"/>
+        <cine:tieneCritica rdf:resource="http://www.semanticweb.org/mejia/cine#Richard_Roeper"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#Alejandro_G._Iñárritu"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#20th_Century_Fox"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hugh_Glass"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#John_Fitzgerald"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>20th Century Fox</cine:distribuidora>
+        <cine:doblaje>Español</cine:doblaje>
+        <cine:doblaje>frances</cine:doblaje>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.12</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:lenguajeNativo>ingles</cine:lenguajeNativo>
+        <cine:nombreObra rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">El Renacido</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">135000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">533000000</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:secuela>
+        <cine:sinopsis>Basada en hechos reales, El Renacido sigue la historia de Hugh Glass, un explorador del siglo XIX que es atacado por un oso y dejado por muerto. Su lucha por sobrevivir y vengarse es una historia de resistencia y perseverancia.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=a8HRA49kaok</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Emma_Watson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Emma_Watson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</cine:edad>
+        <cine:idiomaActor>inglés</cine:idiomaActor>
+        <cine:nacionalidad>Britanica</cine:nacionalidad>
+        <cine:nombre>Emma Watson</cine:nombre>
+        <cine:tipoActuacion>Actriz versátil (cine y activismo)</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Empire_Award_MejorPelícula_2003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Empire_Award_MejorPelícula_2003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Película</cine:categoriaPremio>
+        <cine:motivo>Mejor Película</cine:motivo>
+        <cine:nombrePremio>Empire Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Fantasia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Fantasia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:descripcionGenero>Películas que incluyen elementos mágicos, mitológicos o sobrenaturales.</cine:descripcionGenero>
+        <cine:nombreGenero>Fantasia</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Fox_Searchlight_Pictures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Fox_Searchlight_Pictures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1927</cine:anioFundacionEstudio>
+        <cine:nombreEstudio>Fox Searchlight Pictures</cine:nombreEstudio>
+        <cine:ubicacionEstudio>Los Angeles, California, EE. UU.</cine:ubicacionEstudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Globo_de_Oro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Globo_de_Oro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:categoriaPremio>Mejor película</cine:categoriaPremio>
+        <cine:motivo>Por su impacto cinematográfico y narrativo épico.</cine:motivo>
+        <cine:nombrePremio>Globo de Oro</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Hans_Zimmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Hans_Zimmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <cine:tieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Solomon"/>
+        <cine:nombreBanda>Hans Zimmer</cine:nombreBanda>
+        <untitled-ontology-3:generoMusica>clásica y ambiental</untitled-ontology-3:generoMusica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:descripcionPersonaje>Mago huérfano, hijo de James y Lily Potter, destinado a derrotar a Voldemort</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Harry Potter</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#BAFTA_MejorDiseñoVestuario_2006"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#NationalMovieAward_MejorPelícula_2006"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Lord_Voldemort"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.57</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y el Cáliz de Fuego</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.3</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">150000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">896911078</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry participa en el Torneo de los Tres Magos y presencia el regreso de Voldemort.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=wX5dWfUKGPg</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#PeopleChoiceAward_MejorPelícula_2010"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Lord_Voldemort"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.53</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y el Misterio del Príncipe</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">934416487</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry descubre los horrocruxes de Voldemort y pierde a Dumbledore en manos de Snape.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=CHiGk9bEht8</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Hugo_MejorDrama_2005"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Oscar_MejorEfectosVisuales_2005"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.42</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</cine:estreno>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y el Prisionero de Azkaban</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">130000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">796688549</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry descubre la verdad sobre Sirius Black y viaja en el tiempo para salvar a su padrino.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=cUtaBkW1MKo</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Empire_Award_MejorPelícula_2003"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Saturn_MejorPelículaFantasía_2003"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.61</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:estreno>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y la Cámara Secreta</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">100000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">878979634</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry investiga el misterio de la Cámara Secreta y enfrenta al basilisco que petrifica a los estudiantes.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=MziLH3uow6E</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#KidsChoiceAward_MejorPelícula_2008"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#SatelliteAward_MejorEfectosVisuales_2008"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Lord_Voldemort"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.38</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y la Orden del Fénix</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">150000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">939885929</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry forma el Ejército de Dumbledore para resistir al Ministerio de Magia y a los Mortífagos.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=jdEulcjAvQI</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#BAFTA_MejorDiseñoProduccion_2002"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Oscar_MejorBandaSonora_2002"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.52</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</cine:estreno>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y la Piedra Filosofal</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.5</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">125000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">974755371</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry Potter descubre que es un mago y comienza su educación en Hogwarts, donde lucha contra el maligno Voldemort.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=ZgrCZVjPg9g</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esPrecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#BAFTA_MejorEfectosVisuales_2012"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Saturn_MejorPelículaFantasía_2012"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Suspenso"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Lord_Voldemort"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.46</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y las Reliquias de la Muerte - Parte 1</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">125000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1960283305</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry, Ron y Hermione buscan horrocruxes mientras el Ministerio cae en manos de Voldemort</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=GdNvFDzSNHQ</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:esSecuelaDe rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#PCA_MejorReparto_2012"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioBarfta_premioEspecialHP"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioSaturn_mejorPFHP"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:tieneCritica rdf:resource="http://www.semanticweb.org/mejia/cine#SnoopyStyle"/>
+        <cine:tieneCritica rdf:resource="http://www.semanticweb.org/mejia/cine#TheLittleSongbird"/>
+        <cine:tieneCritica rdf:resource="http://www.semanticweb.org/mejia/cine#hjpog"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#David_Yates"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Fantasia"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Suspenso"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Draco_Malfoy"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Hermione_Granger"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Lord_Voldemort"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Weasley"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Warner Bros. Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.10</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</cine:estreno>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Fantasia</cine:genero>
+        <cine:genero>Suspenso</cine:genero>
+        <cine:lenguajeNativo>Inglés</cine:lenguajeNativo>
+        <cine:nombreObra>Harry Potter y las Reliquias de la Muerte - Parte 2</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.2</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">125000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1342000000</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:secuela>
+        <cine:sinopsis>Harry, Ron y Hermione buscan los horrocruxes para derrotar a Voldemort en la batalla final de Hogwarts.</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=HguSMW8XveQ</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Hermione_Granger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Hermione_Granger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Emma_Watson"/>
+        <cine:descripcionPersonaje>Bruja inteligente y leal, amiga cercana de Harry y Ron</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Hermione Granger</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Historico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Historico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:descripcionGenero>Películas basadas en eventos históricos reales o que recrean períodos históricos.</cine:descripcionGenero>
+        <cine:nombreGenero>Historico</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Hugh_Glass -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Hugh_Glass">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:descripcionPersonaje>Resistente, determinado y movido por la venganza y el amor por su hijo.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Hugh Glass</cine:nombrePersonaje>
+        <cine:rolPersonaje>protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Hugo_MejorDrama_2005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Hugo_MejorDrama_2005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Presentación Dramática</cine:categoriaPremio>
+        <cine:motivo>Mejor Presentación Dramática</cine:motivo>
+        <cine:nombrePremio>Premio Hugo</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Jack_Dawson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Jack_Dawson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Leonardo_DiCaprio"/>
+        <cine:descripcionPersonaje>Joven artista pobre que gana un pasaje en el Titanic y se enamora de Rose</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Jack Dawson</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#James_Cameron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#James_Cameron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <cine:directorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioBAFTA_MejorDirectorPT"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</cine:edad>
+        <cine:estiloDireccion>enfoque innovador y su uso de tecnología avanzada, como cámaras 3D y efectos visuales revolucionarios</cine:estiloDireccion>
+        <cine:formacionDireccion>estudio en Fullerton College</cine:formacionDireccion>
+        <cine:metodoDireccion>meticuloso y perfeccionista, involucrándose profundamente en todos los aspectos de la producción, desde la escritura del guion hasta la edición final</cine:metodoDireccion>
+        <cine:nacionalidad>Canada</cine:nacionalidad>
+        <cine:nombre>James Cameron</cine:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#James_Horner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#James_Horner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <cine:tieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#A_Klaeidoskope"/>
+        <cine:tieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#My_Heart_Will_Go_On"/>
+        <cine:nombreBanda>James Horner</cine:nombreBanda>
+        <untitled-ontology-3:generoMusica>Banda Sonora orquestal</untitled-ontology-3:generoMusica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Jennifer_Connelly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Jennifer_Connelly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorActrizUMB"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Alicia_Nash"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</cine:edad>
+        <cine:idiomaActor>Ingles</cine:idiomaActor>
+        <cine:nacionalidad>Estados Unidos</cine:nacionalidad>
+        <cine:nombre>Jennifer Connelly</cine:nombre>
+        <cine:tipoActuacion>Actriz dramática versátil</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Jessica_Kiang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Jessica_Kiang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:DescripcionCritica>Parasite es una obra maestra del cine moderno que fusiona magistralmente la comedia negra, el thriller y el drama social.</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>Jessica Kiang</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Joe_Walker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Joe_Walker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <cine:seAplicaAObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:TecnicaEdicion>Montaje lineal con énfasis en las emociones y el desarrollo de los personajes</cine:TecnicaEdicion>
+        <untitled-ontology-3:encargadoEdicion>Joe Walker</untitled-ontology-3:encargadoEdicion>
+        <untitled-ontology-3:softwareEdicion>Avid Media Composer</untitled-ontology-3:softwareEdicion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#John_Fitzgerald -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#John_Fitzgerald">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:descripcionPersonaje>Egoísta, despiadado y motivado por la supervivencia</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>John Fitzgerald</cine:nombrePersonaje>
+        <cine:rolPersonaje>antagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#John_Nash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#John_Nash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Russell_Crowe"/>
+        <cine:descripcionPersonaje>Estudiante de la universidad MIT alumna de john nash y posteriormente su esposa.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>John Nash</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Jung_Jae-il -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Jung_Jae-il">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <cine:tieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#The_Belt_of_Faith"/>
+        <cine:nombreBanda>Jung Jae-il</cine:nombreBanda>
+        <untitled-ontology-3:generoMusica>clásica, ambiental</untitled-ontology-3:generoMusica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Kate_Winslet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Kate_Winslet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</cine:edad>
+        <cine:nacionalidad>Inglaterra</cine:nacionalidad>
+        <cine:nombre>Kate Winslet</cine:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#KidsChoiceAward_MejorPelícula_2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#KidsChoiceAward_MejorPelícula_2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</cine:anioEntrega>
+        <cine:categoriaPremio>Película Favorita</cine:categoriaPremio>
+        <cine:motivo>Película Favorita</cine:motivo>
+        <cine:nombrePremio>Kids&apos; Choice Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Kim_Ki-woo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Kim_Ki-woo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:descripcionPersonaje>Inteligente y astuto, Ki-woo está decidido a mejorar la situación económica de su familia. A través de engaños y manipulación</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Kim Ki-woo</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Leonardo_DiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Leonardo_DiCaprio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorActorER"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Hugh_Glass"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Jack_Dawson"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</cine:edad>
+        <cine:idiomaActor>ingles</cine:idiomaActor>
+        <cine:nacionalidad>Estados Unidos</cine:nacionalidad>
+        <cine:nombre>Leonardo DiCaprio</cine:nombre>
+        <cine:tipoActuacion>Actuación metódica y física intensa.</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Lord_Voldemort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Lord_Voldemort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:descripcionPersonaje>Hechicero oscuro que busca la inmortalidad.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Lord Voldemort</cine:nombrePersonaje>
+        <cine:rolPersonaje>antagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#MTVMovieAward_MejorHeroe_2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#MTVMovieAward_MejorHeroe_2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Daniel_Radcliffe"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Héroe</cine:categoriaPremio>
+        <cine:motivo>Mejor Héroe
+rolDeActuacion: &quot;Harry Potter&quot;  
+generoDeActuacion: &quot;Fantasía&quot;</cine:motivo>
+        <cine:nombrePremio>MTV Movie Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#MTVMovieAward_MejorVillano_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#MTVMovieAward_MejorVillano_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Tom_Felton"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Villano</cine:categoriaPremio>
+        <cine:motivo>Mejor Villano</cine:motivo>
+        <cine:nombrePremio>MTV Movie Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Manohla_Dargis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Manohla_Dargis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:esSobreLaObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:DescripcionCritica>12 Años de Esclavitud es una obra de gran intensidad emocional que presenta un retrato brutalmente realista de la esclavitud en Estados Unidos.</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>Manohla Dargis</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Mike_Hill_y_Dan_Hanley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Mike_Hill_y_Dan_Hanley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <cine:TecnicaEdicion>Corte clásico con transiciones sutiles para diferenciar la realidad y alucinaciones</cine:TecnicaEdicion>
+        <untitled-ontology-3:encargadoEdicion>Mike Hill y Dan Hanley</untitled-ontology-3:encargadoEdicion>
+        <untitled-ontology-3:softwareEdicion>Avid</untitled-ontology-3:softwareEdicion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Musical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Musical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:descripcionGenero>Películas que incorporan canciones y coreografías como elemento narrativo fundamental.</cine:descripcionGenero>
+        <cine:nombreGenero>Musical</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#My_Heart_Will_Go_On -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#My_Heart_Will_Go_On">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <cine:duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.4</cine:duracionCancion>
+        <cine:generoCancion>Balada pop</cine:generoCancion>
+        <untitled-ontology-3:nombreCancion>My Heart Will Go On</untitled-ontology-3:nombreCancion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#NationalMovieAward_MejorPelícula_2006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#NationalMovieAward_MejorPelícula_2006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Película Familiar</cine:categoriaPremio>
+        <cine:motivo>Mejor Película Familiar</cine:motivo>
+        <cine:nombrePremio>National Movie Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Oscar_MejorBandaSonora_2002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Oscar_MejorBandaSonora_2002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Banda Sonora</cine:categoriaPremio>
+        <cine:categoriaPremio>Partitura de John Williams</cine:categoriaPremio>
+        <cine:nombrePremio>Premio Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Oscar_MejorEfectosVisuales_2005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Oscar_MejorEfectosVisuales_2005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</cine:anioEntrega>
+        <cine:categoriaPremio>Mejores Efectos Visuales</cine:categoriaPremio>
+        <cine:motivo>Mejores Efectos Visuales</cine:motivo>
+        <cine:nombrePremio>Premio Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#PCA_MejorReparto_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#PCA_MejorReparto_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</cine:anioEntrega>
+        <cine:categoriaPremio>Reparto Cinematográfico</cine:categoriaPremio>
+        <cine:motivo>...</cine:motivo>
+        <cine:nombrePremio>PCA_MejorReparto_2012</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Park_Dong-ik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Park_Dong-ik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:descripcionPersonaje>Elitista y reservado, Park Dong-ik es un hombre que se siente completamente ajeno a las luchas de la clase baja</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Park Dong-ik</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Patsey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Patsey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Lupita_Nyong&apos;o"/>
+        <cine:descripcionPersonaje>Una esclava joven y brillante que es objeto de abuso y amor imposible bajo las condiciones brutales del campo de trabajo</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Patsey</cine:nombrePersonaje>
+        <cine:rolPersonaje>personaje principal secundario</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Paul_Bettany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Paul_Bettany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Charles_Herman"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</cine:edad>
+        <cine:idiomaActor>Ingles</cine:idiomaActor>
+        <cine:nacionalidad>Británico</cine:nacionalidad>
+        <cine:nombre>Paul Bettany</cine:nombre>
+        <cine:tipoActuacion>Actor carismático y expresivo</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#PeopleChoiceAward_MejorPelícula_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#PeopleChoiceAward_MejorPelícula_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</cine:anioEntrega>
+        <cine:categoriaPremio>Película Favorita</cine:categoriaPremio>
+        <cine:motivo>Película Favorita</cine:motivo>
+        <cine:nombrePremio>People&apos;s Choice Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Peter_Travers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Peter_Travers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:DescripcionCritica>Un espectáculo visual y emocionalmente arrollador</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>Peter Travers</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#RalphFiennes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#RalphFiennes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#TonyAward_MejorActor_1995"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Lord_Voldemort"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</cine:edad>
+        <cine:idiomaActor>Inglés</cine:idiomaActor>
+        <cine:nacionalidad>Britanico</cine:nacionalidad>
+        <cine:nombre>Ralph Fiennes</cine:nombre>
+        <cine:tipoActuacion>Actor clásico</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Richard_Roeper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Richard_Roeper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:esSobreLaObra rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:DescripcionCritica>El Renacido es una epopeya visual impresionante con una actuación visceral de Leonardo DiCaprio y una dirección magistral de Alejandro G. Iñárritu.</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>Richard Roeper</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#River_Road_Entertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#River_Road_Entertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <cine:produce rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:anioFundacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000</cine:anioFundacionProductora>
+        <cine:ubicacionProductora>Los Ángeles, California</cine:ubicacionProductora>
+        <untitled-ontology-3:nombreProductora>River Road Entertainment</untitled-ontology-3:nombreProductora>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Roger_ebert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Roger_ebert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:DescripcionCritica>un final épico y emocional para la saga</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>Roger ebert</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Romance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Romance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:descripcionGenero>Películas que se centran en relaciones amorosas y sentimentales entre personajes.</cine:descripcionGenero>
+        <cine:nombreGenero>Romance</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Ron_Howard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Ron_Howard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <cine:directorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorDirectorUMB"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</cine:edad>
+        <cine:estiloDireccion>narrativo clásico</cine:estiloDireccion>
+        <cine:formacionDireccion>Universidad del Sur de California</cine:formacionDireccion>
+        <cine:metodoDireccion>colaborativo y muy respetuoso con sus equipos</cine:metodoDireccion>
+        <cine:nacionalidad>Estados Unidos</cine:nacionalidad>
+        <cine:nombre>Ron Howard</cine:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Ron_Weasley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Ron_Weasley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Rupert_Grint"/>
+        <cine:descripcionPersonaje>Mejor amigo de Harry, valiente pero con complejo de inferioridad.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Ron Weasley</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Rose_DeWhit_Bukater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Rose_DeWhit_Bukater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:descripcionPersonaje>Joven aristocrata atrapada en un compromiso infeliz que encuentra el amor con jack</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Rose Dewhit Bukater</cine:nombrePersonaje>
+        <cine:rolPersonaje>Protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Rupert_Grint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Rupert_Grint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</cine:edad>
+        <cine:idiomaActor>inglés</cine:idiomaActor>
+        <cine:nacionalidad>Britanico</cine:nacionalidad>
+        <cine:nombre>Rupert Grint</cine:nombre>
+        <cine:tipoActuacion>Actor cómico y dramático</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Russell_Crowe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Russell_Crowe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#John_Nash"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</cine:edad>
+        <cine:idiomaActor>español</cine:idiomaActor>
+        <cine:idiomaActor>ingles</cine:idiomaActor>
+        <cine:nacionalidad>Australia</cine:nacionalidad>
+        <cine:nombre>Russell Crowe</cine:nombre>
+        <cine:tipoActuacion>Método actoral intenso</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#SatelliteAward_MejorEfectosVisuales_2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#SatelliteAward_MejorEfectosVisuales_2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</cine:anioEntrega>
+        <cine:categoriaPremio>Mejores Efectos Visuales</cine:categoriaPremio>
+        <cine:motivo>Mejores Efectos Visuales</cine:motivo>
+        <cine:nombrePremio>Satellite Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Saturn_MejorPelículaFantasía_2003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Saturn_MejorPelículaFantasía_2003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Película de Fantasía</cine:categoriaPremio>
+        <cine:motivo>Mejor pelicula de Fantasía</cine:motivo>
+        <cine:nombrePremio>Premio Saturn</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Saturn_MejorPelículaFantasía_2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Saturn_MejorPelículaFantasía_2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Película de Fantasía</cine:categoriaPremio>
+        <cine:motivo>Mejor Película de Fantasía</cine:motivo>
+        <cine:nombrePremio>Premio Saturn</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#SnoopyStyle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#SnoopyStyle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:esSobreLaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:DescripcionCritica>Esta película no podría haber sido mejor; cerró la saga de Harry Potter con broche de oro. Es un buen equilibrio con respecto a la primera parte de Las Reliquias de la Muerte. La primera parte fue más dramática, mientras que la segunda estuvo llena de acción a raudales. Puede que sea mi película favorita de la saga, aunque todas son igual de increíbles. He leído los libros y, sin duda, hay cambios importantes en la película, pero creo que encajan a la perfección con la historia, aunque no sea la trama original. Incluso para quienes no han leído los libros (¡¿por qué no?!), es igual de disfrutable. Esta película, junto con el resto de la saga, será apreciada durante años.</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>SnoopyStyle</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Solomon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Solomon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <cine:apareceEn rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</cine:duracionCancion>
+        <cine:generoCancion>Banda sonora</cine:generoCancion>
+        <untitled-ontology-3:nombreCancion>Solomon</untitled-ontology-3:nombreCancion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Solomon_Northup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Solomon_Northup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Chiwetel_Ejiofor"/>
+        <cine:descripcionPersonaje>Un hombre libre que es secuestrado y vendido como esclavo, luchando por recuperar su libertad</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>Solomon Northup</cine:nombrePersonaje>
+        <cine:rolPersonaje>protagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Stephen_Mirrione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Stephen_Mirrione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <cine:TecnicaEdicion>Montaje con tomas largas y un flujo narrativo inmersivo.</cine:TecnicaEdicion>
+        <untitled-ontology-3:encargadoEdicion>Stephen Mirrione</untitled-ontology-3:encargadoEdicion>
+        <untitled-ontology-3:softwareEdicion>Adobe Premiere Pro</untitled-ontology-3:softwareEdicion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Steve_McQueen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Steve_McQueen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Director"/>
+        <cine:dirigeObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</cine:edad>
+        <cine:estiloDireccion>Narrativa intensa, explorando los aspectos más oscuros de la condición humana.</cine:estiloDireccion>
+        <cine:formacionDireccion>Universidad de Arte de Londres</cine:formacionDireccion>
+        <cine:metodoDireccion>Enfoque visceral y crudo</cine:metodoDireccion>
+        <cine:nacionalidad>Reino Unido</cine:nacionalidad>
+        <cine:nombre>Steve McQueen</cine:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Suspenso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Suspenso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:generoPerteneceAObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:descripcionGenero>Películas que generan tensión y expectación en el espectador.</cine:descripcionGenero>
+        <cine:nombreGenero>Suspenso</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Terror -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Terror">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Genero"/>
+        <cine:descripcionGenero>Películas creadas para provocar miedo, sustos y tensión en la audiencia.</cine:descripcionGenero>
+        <cine:nombreGenero>Terror</cine:nombreGenero>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#TheLittleSongbird -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#TheLittleSongbird">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:esSobreLaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:DescripcionCritica>El desenlace de la serie alcanza algunos de los puntos emotivos más intensos, principalmente debido a nuestra larga conexión con los personajes, y ofrece grandes sorpresas visuales en forma de extensas batallas mágicas. Si bien &quot;Harry Potter y las Reliquias de la Muerte: Parte 2 (2011)&quot; puede ser la más grande en escala y resulta entretenida, carece de profundidad, ya que algunos aspectos quedan extrañamente sin explicar, y en cambio se presenta como un tercer acto extenso. De hecho, se desarrolla como un clímax largo, sin la preparación necesaria para involucrar aún más al público, pero al menos tiene un buen ritmo y no se extiende demasiado. Un broche de oro para una serie fenomenal. 8/10</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>TheLittleSongbird</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#The_Belt_of_Faith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#The_Belt_of_Faith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <cine:duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.38</cine:duracionCancion>
+        <cine:generoCancion>Banda sonora</cine:generoCancion>
+        <untitled-ontology-3:nombreCancion>The Belt of Faith</untitled-ontology-3:nombreCancion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#The_Revenant_Main_Theme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#The_Revenant_Main_Theme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <cine:duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.12</cine:duracionCancion>
+        <cine:generoCancion>Banda Sonora</cine:generoCancion>
+        <untitled-ontology-3:nombreCancion>The Revenant Main Theme</untitled-ontology-3:nombreCancion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Titanic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Titanic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#Globo_de_Oro"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorPT"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Leonardo_DiCaprio"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#James_Cameron"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Universal_Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Romance"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Jack_Dawson"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>20th Century Fox / Paramaunt Pictures</cine:distribuidora>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.12</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Romantico</cine:genero>
+        <cine:lenguajeNativo>Ingles</cine:lenguajeNativo>
+        <cine:nombreObra>Titanic</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2264000000</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:secuela>
+        <cine:sinopsis>Jack y Rose, dos jovenes de diferentes clases sociales se ,se enamoran a bordo del Titanic ,enfrentando la tragedia del naufragio</cine:sinopsis>
+        <cine:tipo>largometraeje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=tA_qMdzvCvk</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Tom_Felton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Tom_Felton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</cine:edad>
+        <cine:idiomaActor>inglés</cine:idiomaActor>
+        <cine:nacionalidad>Britanico</cine:nacionalidad>
+        <cine:nombre>tom Felton</cine:nombre>
+        <cine:tipoActuacion>Actor y músico</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Tom_Hardy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Tom_Hardy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#John_Fitzgerald"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:anioTrayectoria rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</cine:anioTrayectoria>
+        <cine:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</cine:edad>
+        <cine:idiomaActor>ingles</cine:idiomaActor>
+        <cine:nacionalidad>Inglaterra</cine:nacionalidad>
+        <cine:nombre>Tom Hardy</cine:nombre>
+        <cine:tipoActuacion>Transformación camaleónica con intensidad física y psicológica.</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#TonyAward_MejorActor_1995 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#TonyAward_MejorActor_1995">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#RalphFiennes"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Actor en una Obra de Teatro</cine:categoriaPremio>
+        <cine:motivo>Mejor Actor en una Obra de Teatro
+rolDeActuacion: &quot;Hamlet&quot;</cine:motivo>
+        <cine:nombrePremio>Tony Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Twenty_Century_Fox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Twenty_Century_Fox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <cine:anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1935</cine:anioFundacionEstudio>
+        <cine:nombreEstudio>Twenty Century Fox</cine:nombreEstudio>
+        <cine:ubicacionEstudio>Los Ángeles, California, EE. UU.</cine:ubicacionEstudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Una_mente_brillante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Una_mente_brillante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorGuionUMB"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_MejorPeliculaUMB"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#A_Klaeidoskope"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Ed_Harris"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Jennifer_Connelly"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Paul_Bettany"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Russell_Crowe"/>
+        <cine:tieneBandaSonora rdf:resource="http://www.semanticweb.org/mejia/cine#James_Horner"/>
+        <cine:tieneCritica rdf:resource="http://www.semanticweb.org/mejia/cine#Edward_Guthmann"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Howard"/>
+        <cine:tieneEdicion rdf:resource="http://www.semanticweb.org/mejia/cine#Mike_Hill_y_Dan_Hanley"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Universal_Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Accion"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Romance"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Alicia_Nash"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Charles_Herman"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#John_Nash"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#William_Parcher"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#Dream_works"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cine:cgi>
+        <cine:distribuidora>Universal pictures</cine:distribuidora>
+        <cine:doblaje>Español</cine:doblaje>
+        <cine:doblaje>Frances</cine:doblaje>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.15</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2001</cine:estreno>
+        <cine:genero>Accion</cine:genero>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Romantico</cine:genero>
+        <cine:lenguajeNativo>Ingles</cine:lenguajeNativo>
+        <cine:nombreObra>Una mente brillante</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.2</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">58000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">316000000</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:secuela>
+        <cine:sinopsis>la vida de un matemático john nash, quien hace contribuciones revolucionarias en su campo pero la lucha contra la esquizofrenia, afecta su vida profesional y personal</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=h_B16qD89aM</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Universal_Pictures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Universal_Pictures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</cine:anioFundacionEstudio>
+        <cine:nombreEstudio>Universal Pictures</cine:nombreEstudio>
+        <cine:ubicacionEstudio>universal studios california</cine:ubicacionEstudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#WarnerBros_Pictures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Productora"/>
+        <cine:produce rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioFundacionProductora rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</cine:anioFundacionProductora>
+        <cine:ubicacionProductora>Burbank, California, EE.UU.</cine:ubicacionProductora>
+        <untitled-ontology-3:nombreProductora>WarnerBrosPictures</untitled-ontology-3:nombreProductora>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Warner_Bros._Pictures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Cáliz_de_Fuego"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Misterio_del_Príncipe"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_el_Prisionero_de_Azkaban"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Cámara_Secreta"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Orden_del_Fénix"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_la_Piedra_Filosofal"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_1"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</cine:anioFundacionEstudio>
+        <cine:nombreEstudio>Warner Bros. Pictures</cine:nombreEstudio>
+        <cine:ubicacionEstudio>Burbank, California, EE.UU.</cine:ubicacionEstudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#William_Parcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#William_Parcher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Personaje"/>
+        <cine:esParteDeObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:interpretadoPor rdf:resource="http://www.semanticweb.org/mejia/cine#Ed_Harris"/>
+        <cine:descripcionPersonaje>William Parcher es un personaje ficticio producto de las alucinaciones de John Nash.</cine:descripcionPersonaje>
+        <cine:nombrePersonaje>William Parcher</cine:nombrePersonaje>
+        <cine:rolPersonaje>Antagonista</cine:rolPersonaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Yang_Jin-mo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Yang_Jin-mo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Edicion"/>
+        <cine:TecnicaEdicion>Montaje preciso con transiciones fluidas y un ritmo narrativo que intensifica la tensión y el drama</cine:TecnicaEdicion>
+        <untitled-ontology-3:encargadoEdicion>Yang Jin-mo</untitled-ontology-3:encargadoEdicion>
+        <untitled-ontology-3:softwareEdicion>Software: Avid Media Composer</untitled-ontology-3:softwareEdicion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#hjpog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#hjpog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Critica"/>
+        <cine:esSobreLaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:DescripcionCritica>Una de las mejores series que he visto, con un final increíble. Fue un poco emotivo despedirme de todos los personajes después de 10 años.
+
+Ojalá pudiera olvidarlo todo y volver a verla. Daría lo que fuera por volver a verla en el cine.
+
+Recomendada.</cine:DescripcionCritica>
+        <untitled-ontology-3:nombreCritico>hjpog</untitled-ontology-3:nombreCritico>
+        <untitled-ontology-3:puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</untitled-ontology-3:puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioBAFTA_MejorActor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioBAFTA_MejorActor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Chiwetel_Ejiofor"/>
+        <cine:categoriaPremio>Mejor Actor</cine:categoriaPremio>
+        <cine:motivo>Por su impresionante interpretación de Solomon Northup, capturando la lucha interna y externa del personaje</cine:motivo>
+        <cine:nombrePremio>BAFTA</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioBAFTA_MejorDirectorPT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioBAFTA_MejorDirectorPT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaDirector rdf:resource="http://www.semanticweb.org/mejia/cine#James_Cameron"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Director de Película</cine:categoriaPremio>
+        <cine:nombrePremio>BAFTA</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioBarfta_premioEspecialHP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioBarfta_premioEspecialHP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</cine:anioEntrega>
+        <cine:categoriaPremio>Contribución al Cine Británico</cine:categoriaPremio>
+        <cine:motivo>Por el impacto cultural de la saga Harry Potter.</cine:motivo>
+        <cine:nombrePremio>BAFTA Special Award</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_ActrizReparto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_ActrizReparto">
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Lupita_Nyong&apos;o"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Actriz de Reparto</cine:categoriaPremio>
+        <cine:motivo>Por su conmovedora y desgarradora interpretación de Patsey, una esclava sufriente y valiente</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorActorER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorActorER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Leonardo_DiCaprio"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Actor de la película</cine:categoriaPremio>
+        <cine:motivo>Impactante interpretación de un hombre luchando contra la naturaleza y la traición</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorActrizUMB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorActrizUMB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaActor rdf:resource="http://www.semanticweb.org/mejia/cine#Jennifer_Connelly"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Actriz de reparto</cine:categoriaPremio>
+        <cine:motivo>Su actuación como la esposa de John Nash fue destacada por su autenticidad.</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorDirectorER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorDirectorER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaDirector rdf:resource="http://www.semanticweb.org/mejia/cine#Alejandro_G._Iñárritu"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</cine:anioEntrega>
+        <cine:categoriaPremio>mejor director de la pelicula</cine:categoriaPremio>
+        <cine:motivo>Dirección excepcional en la narración de una historia épica y visualmente impresionante</cine:motivo>
+        <cine:nombrePremio>oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorDirectorUMB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorDirectorUMB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaDirector rdf:resource="http://www.semanticweb.org/mejia/cine#Ron_Howard"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Director de película</cine:categoriaPremio>
+        <cine:motivo>Por su dirección magistral que combinó elementos psicológicos.</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorFotografiaER -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorFotografiaER">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</cine:anioEntrega>
+        <cine:categoriaPremio>mejor fotografia</cine:categoriaPremio>
+        <cine:motivo>Cinematografía innovadora que captura la brutalidad de la naturaleza</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorGuionUMB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorGuionUMB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Guión Original</cine:categoriaPremio>
+        <cine:motivo>Fue galardonado por adaptar con sensibilidad la vida de John Nash</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorPT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorPT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Titanic"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor pelicula</cine:categoriaPremio>
+        <cine:motivo>Por su impacto cinematográfico y narrativo épico.</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_MejorPeliculaUMB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_MejorPeliculaUMB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Una_mente_brillante"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Pelicula</cine:categoriaPremio>
+        <cine:motivo>Mejor producción cinematográfica del año por su fuerte impacto emocional.</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioOscar_pelicula12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioOscar_pelicula12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</cine:anioEntrega>
+        <cine:categoriaPremio>Mejor Película</cine:categoriaPremio>
+        <cine:motivo>Por su representación de la historia de Solomon Northup y su lucha por la libertad</cine:motivo>
+        <cine:nombrePremio>Oscar</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#premioSaturn_mejorPFHP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#premioSaturn_mejorPFHP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Premio"/>
+        <cine:premioSeEntregaObra rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:anioEntrega rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</cine:anioEntrega>
+        <cine:categoriaPremio>Fantasía</cine:categoriaPremio>
+        <cine:motivo>Por su conclusión épica de la saga.</cine:motivo>
+        <cine:nombrePremio>Saturn</cine:nombrePremio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+        <cine:obraGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_pelicula12"/>
+        <cine:obraTieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#Solomon"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Chiwetel_Ejiofor"/>
+        <cine:tieneActor rdf:resource="http://www.semanticweb.org/mejia/cine#Lupita_Nyong&apos;o"/>
+        <cine:tieneBandaSonora rdf:resource="http://www.semanticweb.org/mejia/cine#Hans_Zimmer"/>
+        <cine:tieneCritica rdf:resource="http://www.semanticweb.org/mejia/cine#Manohla_Dargis"/>
+        <cine:tieneDirector rdf:resource="http://www.semanticweb.org/mejia/cine#Steve_McQueen"/>
+        <cine:tieneEdicion rdf:resource="http://www.semanticweb.org/mejia/cine#Joe_Walker"/>
+        <cine:tieneEstudio rdf:resource="http://www.semanticweb.org/mejia/cine#Fox_Searchlight_Pictures"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Drama"/>
+        <cine:tieneGenero rdf:resource="http://www.semanticweb.org/mejia/cine#Historico"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Patsey"/>
+        <cine:tienePersonaje rdf:resource="http://www.semanticweb.org/mejia/cine#Solomon_Northup"/>
+        <cine:tieneProductora rdf:resource="http://www.semanticweb.org/mejia/cine#River_Road_Entertainment"/>
+        <cine:cgi rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:cgi>
+        <cine:distribuidora>Fox Searchlight Pictures</cine:distribuidora>
+        <cine:doblaje>español</cine:doblaje>
+        <cine:duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.13</cine:duracion>
+        <cine:estreno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</cine:estreno>
+        <cine:genero>Drama</cine:genero>
+        <cine:genero>Historia</cine:genero>
+        <cine:lenguajeNativo>ingles</cine:lenguajeNativo>
+        <cine:nombreObra>12 años de esclavitud</cine:nombreObra>
+        <cine:popularidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7</cine:popularidad>
+        <cine:precuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:precuela>
+        <cine:presupuesto rdf:datatype="http://www.w3.org/2001/XMLSchema#long">20000000</cine:presupuesto>
+        <cine:recaudacion rdf:datatype="http://www.w3.org/2001/XMLSchema#long">187000000</cine:recaudacion>
+        <cine:secuela rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cine:secuela>
+        <cine:sinopsis>La increíble historia real de Solomon Northup, un hombre libre que fue secuestrado y vendido como esclavo</cine:sinopsis>
+        <cine:tipo>Largometraje</cine:tipo>
+        <cine:trailer>https://www.youtube.com/watch?v=SchhZHRtNiA</cine:trailer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#20th_Century_Fox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#20th_Century_Fox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Estudio"/>
+        <cine:estudioDesarrolla rdf:resource="http://www.semanticweb.org/mejia/cine#El_Renacido"/>
+        <cine:anioFundacionEstudio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1935</cine:anioFundacionEstudio>
+        <cine:nombreEstudio>20th Century Fox</cine:nombreEstudio>
+        <cine:ubicacionEstudio>Los Angeles, California EE. UU.</cine:ubicacionEstudio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Lily&apos;s_Theme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Cancion"/>
+        <cine:apareceEn rdf:resource="http://www.semanticweb.org/mejia/cine#Harry_Potter_y_las_Reliquias_de_la_Muerte_-_Parte_2"/>
+        <cine:duracionCancion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</cine:duracionCancion>
+        <cine:generoCancion>banda sonora cinematográfica</cine:generoCancion>
+        <untitled-ontology-3:nombreCancion>lily&apos;s theme</untitled-ontology-3:nombreCancion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Lupita_Nyong&apos;o -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Lupita_Nyong&apos;o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#Actor"/>
+        <cine:actorGana rdf:resource="http://www.semanticweb.org/mejia/cine#premioOscar_ActrizReparto"/>
+        <cine:interpretaA rdf:resource="http://www.semanticweb.org/mejia/cine#Patsey"/>
+        <cine:participaEn rdf:resource="http://www.semanticweb.org/mejia/cine#12_años_de_esclavitud"/>
+        <cine:idiomaActor>ingles</cine:idiomaActor>
+        <cine:nacionalidad>México/Kenia</cine:nacionalidad>
+        <cine:nombre>Lupita Nyong&apos;o</cine:nombre>
+        <cine:tipoActuacion>Método actoral emocional</cine:tipoActuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mejia/cine#Ryuichi_Sakamoto_&amp;_Alva_Noto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mejia/cine#Ryuichi_Sakamoto_&amp;_Alva_Noto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mejia/cine#BandaSonora"/>
+        <cine:tieneCancion rdf:resource="http://www.semanticweb.org/mejia/cine#The_Revenant_Main_Theme"/>
+        <cine:nombreBanda>Ryuichi Sakamoto &amp; Alva Noto</cine:nombreBanda>
+        <untitled-ontology-3:generoMusica>música ambiental, experimental</untitled-ontology-3:generoMusica>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mejia/cine#Documental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mejia/cine#Pelicula"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mejia/cine#Serie"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

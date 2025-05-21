@@ -1,0 +1,8 @@
+export const PRIMARY = "#123ABD"
+export const SECONDARY = "#BBBBBB"
+export const BACKGROUND = "#EEEEEE"
+export const CONTRAST_TEXT_LIGHT = "#000000"
+export const PRIMARY_DARK = "#666666"
+export const SECONDARY_DARK = "#666666"
+export const BACKGROUND_DARK = "#333333"
+export const CONTRAST_TEXT_DARK = "#ffffff"

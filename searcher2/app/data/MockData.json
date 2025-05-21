@@ -1,0 +1,1614 @@
+{
+"DOID.dbpedia.Disease": [
+        {
+            "iri": "http://dbpedia.org/resource/Cadiot–Chodkiewicz_coupling",
+            "name": "cadiotchodkiewicz coupling"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Caesarean_section",
+            "name": "caesarean section"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Callus",
+            "name": "callus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Camptodactyly-arthropathy-coxa_vara-pericarditis_syndrome",
+            "name": "camptodactylyarthropathycoxa varapericarditis syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Campylobacteriosis",
+            "name": "campylobacteriosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Camurati–Engelmann_disease",
+            "name": "camuratiengelmann disease"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Candidiasis",
+            "name": "candidiasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Capgras_delusion",
+            "name": "capgra delusion"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Car_crash",
+            "name": "car crash"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Carcinoid",
+            "name": "carcinoid"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Carcinosarcoma",
+            "name": "carcinosarcoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cardiac_arrhythmia",
+            "name": "cardiac arrhythmia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cardiac_failure",
+            "name": "cardiac failure"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cardiac_insufficiency",
+            "name": "cardiac insufficiency"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cardiac_surgery",
+            "name": "cardiac surgery"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cardiac_tamponade",
+            "name": "cardiac tamponadar"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cardiomyopathy",
+            "name": "cardiomyopathy"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Caregiver_stress",
+            "name": "caregiver stress"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Carnitine_palmitoyltransferase_II_deficiency",
+            "name": "carnitine palmitoyltransferar ii deficiency"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Cartilage–hair_hypoplasia",
+            "name": "cartilagehair hypoplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Castro–Stephens_coupling",
+            "name": "castrostephens coupling"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Catabolysis",
+            "name": "catabolysis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Catastrophic_injury",
+            "name": "catastrophic injury"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Catecholaminergic_polymorphic_ventricular_tachycardia",
+            "name": "catecholaminergic polymorphic ventricular tachycardia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amdoparvovirus",
+            "name": "amdoparvovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amebiasis_cutis",
+            "name": "amebiasis cutis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ameboma",
+            "name": "ameboma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amelanism",
+            "name": "amelanism"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amelanotic_melanoma",
+            "name": "amelanotic melanomar"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amelia_(birth_defect)",
+            "name": "amelia birth defect"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ameloblastic_carcinoma",
+            "name": "ameloblastic carcinoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ameloblastic_fibroma",
+            "name": "ameloblastic fibroma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ameloblastoma",
+            "name": "ameloblastomar"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amelogenesis_imperfecta",
+            "name": "amelogenesis imperfecto"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amenorrhea",
+            "name": "amenorrhea"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/American_Airlines_Flight_1",
+            "name": "american airlines flight 1"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/American_folk_music_revival",
+            "name": "americar folk music revival"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/American_hop_latent_virus",
+            "name": "american hop latent virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/American_tick_bite_fever",
+            "name": "american tick bite fever"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ametropic_amblyopia",
+            "name": "ametropic amblyopiar"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amide_reduction",
+            "name": "amide reduction"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amine_alkylation",
+            "name": "amine alkylation"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amino_acid_transport_disorder",
+            "name": "amino acid transport disorder"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Aminoaciduria",
+            "name": "aminoaciduria"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Aminolevulinic_acid_dehydratase_deficiency_porphyria",
+            "name": "aminolevulinic acid dehydrata él deficiency porphyrio"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amish_lethal_microcephaly",
+            "name": "amish lethal microcephaly"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amitosis",
+            "name": "amitosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ammonia_poisoning",
+            "name": "ammonia poisoning"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amnesic_shellfish_poisoning",
+            "name": "amnesic shellfish poisoning"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amniotic_fluid_embolism",
+            "name": "amniotic fluid embolism"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amodal_perception",
+            "name": "amodal perception"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amoebic_brain_abscess",
+            "name": "amoebic brain abscess"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amoebic_liver_abscess",
+            "name": "amoebic liver abscess"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amorphosynthesis",
+            "name": "amorphosynthesis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amotivational_syndrome",
+            "name": "amotivational syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ampelovirus",
+            "name": "ampelovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amphetamine_dependence",
+            "name": "amphetamine dependence"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amphistomiasis",
+            "name": "amphistomiasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amplified_musculoskeletal_pain_syndromes",
+            "name": "amplified musculoskeletal pain syndromes"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amplitude_of_accommodation",
+            "name": "amplitude of accommodation"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ampullaviridae",
+            "name": "ampullaviridae"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amputation",
+            "name": "amputation"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amsler_sign",
+            "name": "amsler sign"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Amur_virus",
+            "name": "amur virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/5-alpha-reductase_deficiency",
+            "name": "5alphareductase deficiency"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/AV_nicking",
+            "name": "av nicking"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Baylisascaris_procyonis",
+            "name": "baylisascaris procyonis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bayou_orthohantavirus",
+            "name": "bayou orthohantavirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bcepmuvirus",
+            "name": "bcepmuvirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bdellomicrovirus",
+            "name": "bdellomicrovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bean_calico_mosaic_virus",
+            "name": "bean calico mosaic virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bean_leafroll_virus",
+            "name": "bean leafroll virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bean_pod_mottle_virus",
+            "name": "bean pod mottle virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bean_yellow_mosaic_virus",
+            "name": "bean yellow mosaic virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bear_Canyon_mammarenavirus",
+            "name": "bear canyon mammarenavirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beare–Stevenson_cutis_gyrata_syndrome",
+            "name": "bearestevenson cutis gyrata syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beau's_lines",
+            "name": "beaus lín"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bebaru_virus",
+            "name": "bebaru virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beck's_triad_(cardiology)",
+            "name": "becks triad cardiology"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Becker's_nevus",
+            "name": "beckers nevus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Becurtovirus",
+            "name": "becurtovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bednar's_aphthae",
+            "name": "bednars aphthair"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beech_bark_disease",
+            "name": "beech bark disease"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_curly_top_virus",
+            "name": "beet curly top virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_mosaic_virus",
+            "name": "beet mosaic virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_necrotic_yellow_vein_virus",
+            "name": "beet necrotic yellow vein virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_pseudoyellows_virus",
+            "name": "beet pseudoyellow virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_soil-borne_mosaic_virus",
+            "name": "beet soilborne mosaic virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_vascular_necrosis",
+            "name": "beet vascular necrosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_western_yellows_virus",
+            "name": "beet western yellows virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Beet_yellows_virus",
+            "name": "beet yellows virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Begomovirus",
+            "name": "begomovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bell's_mania",
+            "name": "bells mania"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bendopnea",
+            "name": "bendopnea"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_cephalic_histiocytosis",
+            "name": "benign cephalic histiocytosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_fasciculation_syndrome",
+            "name": "benign fasciculation syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_hereditary_chorea",
+            "name": "benign hereditary chorea"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_melanocytic_nevus",
+            "name": "benign melanocytic nevus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_metastasizing_leiomyoma",
+            "name": "benign metastasizing leiomyomar"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_neonatal_hemangiomatosis",
+            "name": "benign neonatal hemangiomatosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_neonatal_sleep_myoclonus",
+            "name": "benign neonatal sleep myoclonus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_paroxysmal_vertigo_of_childhood",
+            "name": "benign paroxysmal vertigo of childhood"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_prostatic_hyperplasia",
+            "name": "benign prostatic hyperplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Benign_symmetric_lipomatosis",
+            "name": "benign symmetric lipomatosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/B-cell_chronic_lymphocytic_leukemia",
+            "name": "bcell chronic lymphocytic leukemia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Potassium_cyanide",
+            "name": "potassium cyanidir"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Potomania",
+            "name": "potomania"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pouchitis",
+            "name": "pouchitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Prader–Willi_syndrome",
+            "name": "praderwilli syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pre-eclampsia",
+            "name": "preeclampsia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Preauricular_sinus_and_cyst",
+            "name": "preauricular sinu and cyst"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Precursor_B-cell_lymphoblastic_leukemia",
+            "name": "precursor bcell lymphoblastic leukemia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pregnancy_and_lactation-associated_osteoporosis",
+            "name": "pregnancy and lactationassociated osteoporosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Primary_biliary_cirrhosis",
+            "name": "primary biliary cirrhosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Primary_myelofibrosis",
+            "name": "primary myelofibrosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Primary_progressive_aphasia",
+            "name": "primary progressive aphasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Proctitis",
+            "name": "proctitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Proctocolitis",
+            "name": "proctocolitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Progeria",
+            "name": "progeria"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Progressive_bulbar_palsy",
+            "name": "progressive bulbar palsy"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Progressive_familial_intrahepatic_cholestasis",
+            "name": "progressive familial intrahepatic cholestasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Prolactinoma",
+            "name": "prolactinoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Proliferating_angioendotheliomatosis",
+            "name": "proliferating angioendotheliomatosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Propionic_acidemia",
+            "name": "propionic acidemia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Prosopagnosia",
+            "name": "prosopagnosia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Proteinuria",
+            "name": "proteinuria"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Proximity_problems",
+            "name": "proximity problems"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pseudolymphoma",
+            "name": "pseudolymphoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pseudomyopia",
+            "name": "pseudomyopia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pseudoxanthoma_elasticum",
+            "name": "pseudoxanthoma elasticum"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Psoriasis",
+            "name": "psoriasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Psychosis",
+            "name": "psychosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pterygium_inversum_unguis",
+            "name": "pterygium inversum unguis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ptosis_(eyelid)",
+            "name": "ptosis eyelid"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pulmonary_atresia",
+            "name": "pulmonary atresia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pulmonary_edema",
+            "name": "pulmonary edema"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pulmonary_fibrosis",
+            "name": "pulmonary fibrosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pulmonary_hyperplasia",
+            "name": "pulmonary hyperplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pulmonary_hypoplasia",
+            "name": "pulmonary hypoplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pulmonary_tuberculosis",
+            "name": "pulmonary tuberculosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Punctate_inner_choroiditis",
+            "name": "punctatir inner choroiditis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pure_red_cell_aplasia",
+            "name": "pure red cell aplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Purpura_fulminans",
+            "name": "purpura fulminans"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pus",
+            "name": "pus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pyelonephritis",
+            "name": "pyelonephritis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pyloric_stenosis",
+            "name": "pyloric stenosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pyruvate_carboxylase_deficiency",
+            "name": "pyruvate carboxylase deficiency"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Pyuria",
+            "name": "pyuria"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Balls_into_bins",
+            "name": "balls into bins"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Rosacea",
+            "name": "rosacea"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Roseola",
+            "name": "roseola"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Rubella",
+            "name": "rubella"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Rubus_yellow_net_virus",
+            "name": "rubus yellow net virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/San_Dieguito_Complex",
+            "name": "san dieguito complex"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/San_Francisco_fog",
+            "name": "san francisco fog"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sandhoff_disease",
+            "name": "sandhoff desear"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sandmeyer_reaction",
+            "name": "sandmeyer reaction"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sanfilippo_syndrome",
+            "name": "sanfilippo syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sarcoidosis",
+            "name": "sarcoidosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sarcoma",
+            "name": "sarcoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sarcomatoid_carcinoma",
+            "name": "sarcomatoid carcinoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Saree_cancer",
+            "name": "saree cancer"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sarett_oxidation",
+            "name": "sarett oxidation"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sari_cancer",
+            "name": "sari cancer"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sati_(practice)",
+            "name": "sati practice"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Saudi_Arabia_and_weapons_of_mass_destruction",
+            "name": "saudi arabia and weapons of mass destruction"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scabies",
+            "name": "scabies"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scale-step",
+            "name": "scalestep"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scaphoid_fracture",
+            "name": "scaphoid fracture"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scedosporiosis",
+            "name": "scedosporiosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scheuermann's_disease",
+            "name": "scheuermanns desear"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schindler_disease",
+            "name": "schindler desear"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schistosomiasis",
+            "name": "schistosomiasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schizoid_personality_disorder",
+            "name": "schizoid personality disorder"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schizophrenia",
+            "name": "schizophrenia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schizophreniform_disorder",
+            "name": "schizophreniform disorder"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schmidt_reaction",
+            "name": "schmidt reaction"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scholl_reaction",
+            "name": "scholl reaction"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Schwannoma",
+            "name": "schwannoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sciatica",
+            "name": "sciatica"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scilly_naval_disaster_of_1707",
+            "name": "scilly naval disaster of 1707"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scleritis",
+            "name": "scleritis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Sclerocornea",
+            "name": "sclerocornea"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scoliosis",
+            "name": "scoliosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Scotland_in_the_High_Middle_Ages",
+            "name": "scotland in the high middle ages"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Bovine_virus_diarrhea",
+            "name": "bovine virus diarrhea"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elaidinization",
+            "name": "elaidinization"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elasticity_(physics)",
+            "name": "elasticity physics"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elasto-capillarity",
+            "name": "elastocapillarity"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elastofibroma_dorsi",
+            "name": "elastofibromar dorsi"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elastosis_perforans_serpiginosa",
+            "name": "elastosis perforan serpiginós"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elbow_dysplasia",
+            "name": "elbow dysplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Electroadhesion",
+            "name": "electroadhesion"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Electrophilic_addition",
+            "name": "electrophilic addition"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elejalde_syndrome",
+            "name": "elejalde syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elephant_endotheliotropic_herpesvirus",
+            "name": "elephant endotheliotropic herpesvirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elephantiasis",
+            "name": "elephantiasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elephantiasis_nostras",
+            "name": "elephantiasis nostra"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elevated_transaminases",
+            "name": "elevated transaminás"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elevational_diversity_gradient",
+            "name": "elevational diversity gradient"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Elevenses",
+            "name": "elevens"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enadenotucirev",
+            "name": "enadenotucirev"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enamel_hypoplasia",
+            "name": "enamel hypoplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enamovirus",
+            "name": "enamovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enantiostasis",
+            "name": "enantiostasis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Encapsulating_peritoneal_sclerosis",
+            "name": "encapsulating peritoneal sclerosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Encephalitis",
+            "name": "encephalitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Encephalocraniocutaneous_lipomatosis",
+            "name": "encephalocraniocutaneous lipomatosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Encephalomyelitis",
+            "name": "encephalomyelitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enchondroma",
+            "name": "enchondroma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enchondromatosis",
+            "name": "enchondromatosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endocapillary_proliferative_glomerulonephritis",
+            "name": "endocapillary proliferative glomerulonephritis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endocrine_bone_disease",
+            "name": "endocrine bonir disease"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endocrine_gland_neoplasm",
+            "name": "endocrine gland neoplasm"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endometrial_hyperplasia",
+            "name": "endometrial hyperplasia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endometrial_intraepithelial_neoplasia",
+            "name": "endometrial intraepithelial neoplasio"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endometrial_stromal_sarcoma",
+            "name": "endometrial stromal sarcoma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endometrioma",
+            "name": "endometrioma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endometrosis",
+            "name": "endometrosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endosalpingiosis",
+            "name": "endosalpingiosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Endotheliitis",
+            "name": "endotheliitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/English_cadence",
+            "name": "english cadence"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enolase_deficiency",
+            "name": "enolase deficiency"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enophthalmos",
+            "name": "enophthalmos"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enquatrovirus",
+            "name": "enquatrovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Entebbe_bat_virus",
+            "name": "entebbe bat virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enteritis",
+            "name": "enteritis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enterococcus",
+            "name": "enterococcus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enterocolitis",
+            "name": "enterocolitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enteroinvasive_Escherichia_coli",
+            "name": "enteroinvasive escherichia coli"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enterotoxemia",
+            "name": "enterotoxemia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enterovirus",
+            "name": "enterovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enterovirus_D",
+            "name": "enterovirus d"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enterovirus_E",
+            "name": "enterovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enthesitis",
+            "name": "enthesitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Entomobirnavirus",
+            "name": "entomobirnavirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Entomophobia",
+            "name": "entomophobia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Entomophthoramycosis",
+            "name": "entomophthoramycosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enuresis",
+            "name": "enuresis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Environmental_degradation",
+            "name": "environmental degradation"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enyne_metathesis",
+            "name": "enyne metathesis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Enzootic_nasal_tumor_virus",
+            "name": "enzootic nasal tumor virus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinopenia",
+            "name": "eosinopenia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilia",
+            "name": "eosinophilia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilia–myalgia_syndrome",
+            "name": "eosinophiliamyalgia syndrome"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_bronchitis",
+            "name": "eosinophilic bronchitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_cellulitis",
+            "name": "eosinophilic cellulitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_cystitis",
+            "name": "eosinophilic cystitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_dermatosis",
+            "name": "eosinophilic dermatosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_folliculitis",
+            "name": "eosinophilic folliculitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_gastroenteritis",
+            "name": "eosinophilic gastroenteritis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_granuloma",
+            "name": "eosinophilic granuloma"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_myocarditis",
+            "name": "eosinophilic myocarditis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_pneumonia",
+            "name": "eosinophilic pneumonia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_ulcer_of_the_oral_mucosa",
+            "name": "eosinophilic ulcer of the oral mucosa"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophilic_vasculitis",
+            "name": "eosinophilic vasculitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Eosinophiluria",
+            "name": "eosinophiluria"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ephemerovirus",
+            "name": "ephemerovirus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Ephialtes_(illness)",
+            "name": "ephialtes illness"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epidemic_typhus",
+            "name": "epidemic typhus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epidemiology_of_pneumonia",
+            "name": "epidemiology of pneumonia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epidermolysis_bullosa",
+            "name": "epidermolysis bullós"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epidermolysis_bullosa_dystrophica",
+            "name": "epidermolysis bullós dystrophico"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epidermolytic_hyperkeratosis",
+            "name": "epidermolytic hyperkeratosis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epidural_abscess",
+            "name": "epidural abscess"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epigastric_hernia",
+            "name": "epigastric hernia"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epigenetics_and_melanoma",
+            "name": "epigenetics and melanomo"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epignathus",
+            "name": "epignathus"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epilepsy-intellectual_disability_in_females",
+            "name": "epilepsyintellectual disability in females"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epileptic_spasms",
+            "name": "epileptic spasms"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Epiploic_appendagitis",
+            "name": "epiploic appendagitis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Episcleritis",
+            "name": "episcleritis"
+        },
+        {
+            "iri": "http://dbpedia.org/resource/Episodic_dyscontrol_syndrome",
+            "name": "episodic dyscontrol syndrome"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Alimento_Permitido": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_01",
+            "name": "Brócoli",
+            "name_individual": "Brócoli",
+            "sample_name": "Alimento_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_02",
+            "name": "Zanahoria",
+            "name_individual": "Zanahoria",
+            "sample_name": "Alimento_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_03",
+            "name": "Tomate",
+            "name_individual": "Tomate",
+            "sample_name": "Alimento_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_04",
+            "name": "Espinaca",
+            "name_individual": "Espinaca",
+            "sample_name": "Alimento_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_05",
+            "name": "Cúrcuma",
+            "name_individual": "Cúrcuma",
+            "sample_name": "Alimento_05"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Alimento_Restringuido": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_06",
+            "name": "norte",
+            "name_individual": "N",
+            "sample_name": "Alimento_06"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_07",
+            "name": "Alcohol",
+            "name_individual": "Alcohol",
+            "sample_name": "Alimento_07"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_08",
+            "name": "Azúcar Refinada",
+            "name_individual": "Azúcar Refinada",
+            "sample_name": "Alimento_08"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_09",
+            "name": "Sal",
+            "name_individual": "Sal",
+            "sample_name": "Alimento_09"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Alimento_10",
+            "name": "Alimentos fritos",
+            "name_individual": "Alimentos Fritos",
+            "sample_name": "Alimento_10"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Biopsia": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_05",
+            "name": "Biopsia por aguja",
+            "name_individual": "Biopsia por aguja",
+            "sample_name": "Prueba_diagnostica_05"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_06",
+            "name": "Biopsia quirurgica",
+            "name_individual": "Biopsia quirurgica",
+            "sample_name": "Prueba_diagnostica_06"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Cancer": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_02",
+            "name": "Cáncer de colon",
+            "name_individual": "Cancer de colon",
+            "sample_name": "Cancer_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_04",
+            "name": "Cáncer de próstata",
+            "name_individual": "Cancer de prostata",
+            "sample_name": "Cancer_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_05",
+            "name": "Cancer de pulmon",
+            "name_individual": "Cancer de pulmon",
+            "sample_name": "Cancer_05"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_06",
+            "name": "Cáncer de páncreas",
+            "name_individual": "Cancer de pancreas",
+            "sample_name": "Cancer_06"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_08",
+            "name": "Cancer de higado",
+            "name_individual": "Cancer de higado",
+            "sample_name": "Cancer_08"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_09",
+            "name": "Cancer de piel",
+            "name_individual": "Cancer de piel",
+            "sample_name": "Cancer_09"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_01",
+            "name": "Cáncer de cuello uterino",
+            "name_individual": "Cancer de cervix",
+            "sample_name": "Cancer_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_03",
+            "name": "Madre Cáncer",
+            "name_individual": "Cancer de mama",
+            "sample_name": "Cancer_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Cancer_07",
+            "name": "Cancer de estomago",
+            "name_individual": "Cancer de estomago",
+            "sample_name": "Cancer_07"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Cuarto_nivel": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_06",
+            "name": "Instituto Oncológico de Bolivia (IOB)",
+            "name_individual": "Instituto Oncológico de Bolivia (IOB)",
+            "sample_name": "Centro_medico_06"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Endoscopia": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_10",
+            "name": "Colonoscopia",
+            "name_individual": "Colonoscopia",
+            "sample_name": "Prueba_diagnostica_10"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_09",
+            "name": "Gastroscopia",
+            "name_individual": "Gastroscopia",
+            "sample_name": "Prueba_diagnostica_09"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Examen_de_imagen": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_01",
+            "name": "Radiografía",
+            "name_individual": "Radiografia",
+            "sample_name": "Prueba_diagnostica_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_03",
+            "name": "Resonancia magnetica",
+            "name_individual": "Resonancia magnetica",
+            "sample_name": "Prueba_diagnostica_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_02",
+            "name": "Tomografia computarizada",
+            "name_individual": "Tomografia computarizada",
+            "sample_name": "Prueba_diagnostica_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_04",
+            "name": "Ultrasonido",
+            "name_individual": "Ultrasonido",
+            "sample_name": "Prueba_diagnostica_04"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Examen_de_sangre": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_07",
+            "name": "Marcadores tumorales",
+            "name_individual": "Marcadores tumorales",
+            "sample_name": "Prueba_diagnostica_07"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_08",
+            "name": "Recuento de sangre llena",
+            "name_individual": "Hemograma completo",
+            "sample_name": "Prueba_diagnostica_08"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Examen_fisico": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_12",
+            "name": "Examen clinico",
+            "name_individual": "Examen clinico",
+            "sample_name": "Prueba_diagnostica_12"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Organo": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_10",
+            "name": "Útero",
+            "name_individual": "Utero",
+            "sample_name": "Organo_10"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_02",
+            "name": "Colon",
+            "name_individual": "Colon",
+            "sample_name": "Organo_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_05",
+            "name": "Mamá",
+            "name_individual": "Mama",
+            "sample_name": "Organo_05"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_08",
+            "name": "Próstata",
+            "name_individual": "Prostata",
+            "sample_name": "Organo_08"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_11",
+            "name": "Pulmon",
+            "name_individual": "Pulmon",
+            "sample_name": "Organo_11"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_01",
+            "name": "Páncreas",
+            "name_individual": "Pancreas",
+            "sample_name": "Organo_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_03",
+            "name": "Estomago",
+            "name_individual": "Estomago",
+            "sample_name": "Organo_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_04",
+            "name": "Higado",
+            "name_individual": "Higado",
+            "sample_name": "Organo_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_07",
+            "name": "Piel",
+            "name_individual": "Piel",
+            "sample_name": "Organo_07"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_06",
+            "name": "Ovarios",
+            "name_individual": "Ovarios",
+            "sample_name": "Organo_06"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Organo_09",
+            "name": "Riñones",
+            "name_individual": "Riñones",
+            "sample_name": "Organo_09"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Persona": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_1",
+            "name": "Juan",
+            "name_individual": "Juan",
+            "sample_name": "Persona_1"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_2",
+            "name": "Guadalupo",
+            "name_individual": "Guadalupe",
+            "sample_name": "Persona_2"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_3",
+            "name": "Maximiliano",
+            "name_individual": "Maximiliano",
+            "sample_name": "Persona_3"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_4",
+            "name": "Diego",
+            "name_individual": "Diego",
+            "sample_name": "Persona_4"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_5",
+            "name": "Ana María",
+            "name_individual": "Ana María",
+            "sample_name": "Persona_5"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_6",
+            "name": "Valeria",
+            "name_individual": "Valeria",
+            "sample_name": "Persona_6"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Persona_7",
+            "name": "Túpac",
+            "name_individual": "Túpac",
+            "sample_name": "Persona_7"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Primer_nivel": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_01",
+            "name": "Centro de Salud Las Lomas",
+            "name_individual": "Centro de Salud Las Lomas",
+            "sample_name": "Centro_medico_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_09",
+            "name": "Centro de Salud Itatiqui",
+            "name_individual": "Centro de Salud Itatiqui",
+            "sample_name": "Centro_medico_09"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Prueba_genetica": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Prueba_diagnostica_11",
+            "name": "Análisis genético",
+            "name_individual": "Analisis genetico",
+            "sample_name": "Prueba_diagnostica_11"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Remedio_Herbal": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Remedio_Herbal_01",
+            "name": "Cúrcuma",
+            "name_individual": "Cúrcuma",
+            "sample_name": "Remedio_Herbal_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Remedio_Herbal_02",
+            "name": "Jengibre",
+            "name_individual": "Jengibre",
+            "sample_name": "Remedio_Herbal_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Remedio_Herbal_03",
+            "name": "Tiene verde",
+            "name_individual": "Té Verde",
+            "sample_name": "Remedio_Herbal_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Remedio_Herbal_04",
+            "name": "él",
+            "name_individual": "Ajo",
+            "sample_name": "Remedio_Herbal_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Remedio_Herbal_05",
+            "name": "Aumenta la energía",
+            "name_individual": "Aumenta la energía",
+            "sample_name": "Remedio_Herbal_05"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Remedio_Herbal_06",
+            "name": "Equinácea",
+            "name_individual": "Equinácea",
+            "sample_name": "Remedio_Herbal_06"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Segundo_nivel": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_02",
+            "name": "Hospital Bolívar",
+            "name_individual": "Hospital Bolívar",
+            "sample_name": "Centro_medico_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_04",
+            "name": "Hospital Juan XXIII",
+            "name_individual": "Hospital Juan XXIII",
+            "sample_name": "Centro_medico_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_10",
+            "name": "Hospital Municipal La Merced",
+            "name_individual": "Hospital Municipal La Merced",
+            "sample_name": "Centro_medico_10"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Sistema": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Sistema_03",
+            "name": "Sistema reproductor",
+            "name_individual": "Sistema reproductor",
+            "sample_name": "Sistema_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Sistema_02",
+            "name": "Sistema digestivo",
+            "name_individual": "Sistema Digestivo",
+            "sample_name": "Sistema_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Sistema_06",
+            "name": "Sistema respiratorio",
+            "name_individual": "Sistema respiratorio",
+            "sample_name": "Sistema_06"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Sistema_04",
+            "name": "Sistema de teguentaria",
+            "name_individual": "Sistema tegumentario",
+            "sample_name": "Sistema_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Sistema_05",
+            "name": "Sistema urinario",
+            "name_individual": "Sistema urinario",
+            "sample_name": "Sistema_05"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Sistema_01",
+            "name": "Sistema Circulatorio",
+            "name_individual": "Sistema Circulatorio",
+            "sample_name": "Sistema_01"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Tercer_nivel": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_03",
+            "name": "Hospital de Clínicas Murillo",
+            "name_individual": "Hospital de Clínicas Murillo",
+            "sample_name": "Centro_medico_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_05",
+            "name": "Hospital Universitario Joaquín Fernández",
+            "name_individual": "Hospital Universitario Joaquín Fernández",
+            "sample_name": "Centro_medico_05"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_07",
+            "name": "Hospital Japonés",
+            "name_individual": "Hospital Japonés",
+            "sample_name": "Centro_medico_07"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Centro_medico_08",
+            "name": "Hospital del Niño",
+            "name_individual": "Hospital del Niño",
+            "sample_name": "Centro_medico_08"
+        }
+    ],
+    "F:\\Descargas\\iconos web\\Buscador\\resourse\\ontology.owx.Tratamiento_Medico": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Tratamiento_Medico_04",
+            "name": "Quimioterapia",
+            "name_individual": "Quimioterapia",
+            "sample_name": "Tratamiento_Medico_04"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Tratamiento_Medico_01",
+            "name": "Cirugía",
+            "name_individual": "Cirugía",
+            "sample_name": "Tratamiento_Medico_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Tratamiento_Medico_03",
+            "name": "Cirugía paliativa",
+            "name_individual": "Cirugía paliativa",
+            "sample_name": "Tratamiento_Medico_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Tratamiento_Medico_02",
+            "name": "Cirugía curativa",
+            "name_individual": "Cirugía curativa",
+            "sample_name": "Tratamiento_Medico_02"
+        }
+    ],
+    "owl.Thing": [
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Medicamento_01",
+            "name": "Cisplatino",
+            "name_individual": "Cisplatino",
+            "sample_name": "Medicamento_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Medicamento_02",
+            "name": "5-fluorouracilo (5-FU)",
+            "name_individual": "5-fluorouracilo (5-FU)",
+            "sample_name": "Medicamento_02"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Medicamento_03",
+            "name": "Trastuzumab",
+            "name_individual": "Trastuzumab",
+            "sample_name": "Medicamento_03"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Suplemento_Nutricional_01",
+            "name": "Nutricervix Plus",
+            "name_individual": "NutriCervix Plus",
+            "sample_name": "Suplemento_Nutricional_01"
+        },
+        {
+            "iri": "http://www.semanticweb.org/ontologies/oncology-ontology#Suplemento_Nutricional_03",
+            "name": "Proteína de cuadro de pecho",
+            "name_individual": "BreastCare Protein",
+            "sample_name": "Suplemento_Nutricional_03"
+        }
+    ]
+}
