@@ -4,19 +4,75 @@ import { EmojiEvents, Face6, Menu, Person, Person4 } from '@mui/icons-material';
 import { Button, Drawer, Toolbar, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, useTheme } from '@mui/material';
 import { DarkModeOutlined, LightModeOutlined, Movie, PrecisionManufacturing, FolderCopy } from '@mui/icons-material';
 import { ModeContext } from '../theme/modeContext';
+import { useRouter } from 'next/navigation';
+import { useLanguage } from '../custom/languageSelectorContext';
+
+const local = 'http://localhost:3000';
+
+const dataMenu = [
+  {
+    name:"Pelicula",
+    icon: Movie,
+  },
+  {
+    name:"Estudio",
+    icon: PrecisionManufacturing,
+  },
+  {
+    name:"Genero",
+    icon: FolderCopy,
+  },
+  {
+    name:"Actor",
+    icon: Person,
+  },
+  {
+    name:"Director",
+    icon: Face6,
+  },
+  {
+    name:"Personaje",
+    icon: Person4,
+  },
+  {
+    name:"Premio",
+    icon: EmojiEvents,
+  },
+  {
+    name:"Productora",
+    icon: FolderCopy,
+  },
+]
+
+const ItemButtonMenu = ({ setIsDeployed, url, name, Icon }) => {
+    const route = useRouter();
+    const handleClick = (url) => {
+      setIsDeployed(false)
+      route.push(url)
+    }
+  return (<ListItem onClick={() => handleClick(url) } button="true">
+            <ListItemIcon>
+              <Icon />
+            </ListItemIcon>
+            <ListItemText  primary={ name }/>
+          </ListItem>);
+}
+
 const AsideMenu = () => {
+    const { lang } = useLanguage();
     const [isDeployed, setIsDeployed] = useState(false);
     const {modeContext} = React.useContext(ModeContext);
     const theme = useTheme();
     const handleDrawerToggle = () => {
         setIsDeployed(!isDeployed);
     }
+    
     return(<>
     <Button
         onClick={handleDrawerToggle}
     >
         <Menu sx={{
-            color: theme.palette.primary.contrastText,
+            color: theme.palette.secondary.contrastText,
             fontSize:"50px",
         }}/>
     </Button>
@@ -43,48 +99,15 @@ const AsideMenu = () => {
       </Toolbar>
       <Divider />
       <List>
-          <ListItem button="true">
-            <ListItemIcon>
-              <Movie />
-            </ListItemIcon>
-            <ListItemText primary="Obra" />
-          </ListItem>
-           <ListItem button="true">
-            <ListItemIcon>
-              <PrecisionManufacturing />
-            </ListItemIcon>
-            <ListItemText primary="Estudio" />
-          </ListItem>
-           <ListItem button="true">
-            <ListItemIcon>
-              <FolderCopy />
-            </ListItemIcon>
-            <ListItemText primary="Genero" />
-          </ListItem>
-           <ListItem button="true">
-            <ListItemIcon>
-              <Person />
-            </ListItemIcon>
-            <ListItemText primary="Actor" />
-          </ListItem>
-           <ListItem button="true">
-            <ListItemIcon>
-              <Face6 />
-            </ListItemIcon>
-            <ListItemText primary="Director" />
-          </ListItem>
-           <ListItem button="true">
-            <ListItemIcon>
-              <Person4 />
-            </ListItemIcon>
-            <ListItemText primary="Personaje" />
-          </ListItem>
-           <ListItem button="true">
-            <ListItemIcon>
-              <EmojiEvents />
-            </ListItemIcon>
-            <ListItemText primary="Premio" />
-          </ListItem>
+          {
+            dataMenu.map((data, index) => <ItemButtonMenu 
+                          key={ index+data.name }
+                          setIsDeployed={ setIsDeployed } 
+                          url={`${local}/${lang['selected']}/class/${data.name}`}
+                          name={data.name}
+                          Icon = { data.icon }
+          />)
+          }
       </List>
       <Divider />
       

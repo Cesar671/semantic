@@ -24,7 +24,7 @@ export const useMode = () => {
             mode:mode,
             primary:{
                 main: PRIMARY,
-                contrastText: CONTRAST_TEXT_LIGHT,
+                contrastText: CONTRAST_TEXT_DARK,
             },
             secondary:{
                 main: SECONDARY,
@@ -41,7 +41,7 @@ export const useMode = () => {
                 },
                 primary:{
                     main: PRIMARY_DARK,
-                    contrastText: CONTRAST_TEXT_DARK,
+                    contrastText: CONTRAST_TEXT_LIGHT,
                 },
                 secondary:{
                     main: SECONDARY_DARK,

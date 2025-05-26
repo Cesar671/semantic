@@ -19,6 +19,8 @@ const Loading = () => {
             alignItems:"center",
             height:"60px",
             borderRadius:"30px",
+            justifySelf:"center",
+            alignSelf:"center",
         }}
     >
         <Typography

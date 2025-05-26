@@ -1,10 +1,30 @@
 'use client';
-import { Card } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { useDataSearcher } from '@/app/custom/useDataContext';
 import { enqueueSnackbar } from 'notistack';
+import { Container, Card, Typography } from '@mui/material';
+import DataComponent from './ui/DataComponent';
 const host = 'http://localhost:5000';
+function processIndividualData(data) {
+  if (!data) return null;
+  
+  return {
+    ...data,
+    properties: sortDataIndividual(data.properties.map(obj => {
+      const [k, v] = Object.entries(obj)[0];
+      return { [k]: v };
+    }))
+  };
+}
+
+function sortDataIndividual(data){
+  return data.sort((a, b) => {
+    const keyA = Object.keys(a)[0];
+    const keyB = Object.keys(b)[0];
+    return keyA.localeCompare(keyB);
+  });
+}
 
 function page() {
   const params = useParams();
@@ -12,55 +32,41 @@ function page() {
   const { setLoading} = useDataSearcher()
   const [individual, setIndividual] = useState(null);
   useEffect(() => {
-    const fetchData = async () => {
-        setLoading(true)
-        const uri = `${host}/searchClass?query=${decodeURIComponent(nameClass)}&lang=${locale}`;
-        console.log(uri)
-        await fetch(uri)
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-          setIndividual(data.find(d => d.iri === decodeURIComponent(individualIri)));
-          setLoading(false)
-          console.log(individual);
-        })
-        .catch(error => {
-            enqueueSnackbar(error)
-            setLoading(false)
-        });
-        
-    }
+    const fetchAndProcessData = async () => {
+    setLoading(true);
+    try {
+      const uri = `${host}/searchClass?query=${decodeURIComponent(nameClass)}&lang=${locale}`;
+      const response = await fetch(uri);
+      
+      if (!response.ok) throw new Error('Error en la respuesta');
+      
+      const data = await response.json();
+      const foundIndividual = data.find(d => d.iri === decodeURIComponent(individualIri));
 
-    fetchData();
+      const processedIndividual = processIndividualData(foundIndividual);
+      setIndividual(processedIndividual);
+    } catch (error) {
+      enqueueSnackbar(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchAndProcessData();
   }, [nameClass]);
 
   return (
-    <div className="d-flex justify-content-center">
-      {individual && (
-        <Card className="w-75">
-          <Card.Body className="d-flex flex-column align-items-center">
-            <Card.Title>{individual.name_individual}</Card.Title>
-            <Card.Text>
-              <a href={individual.iri} className="border p-2 d-block text-center">
-                Sobre: {individual.name_individual}
-              </a>
-            </Card.Text>
-            {individual.properties.map((obj, i) => {
-              const [k, v] = Object.entries(obj)[0];
+    <Container
+      className="d-flex justify-content-center"
+      component="main"
+      sx={{
 
-              if (typeof v !== 'object') {
-                return (
-                  <div key={i} className="d-flex flex-column align-items-center">
-                    <strong>{k}: </strong>{v}
-                  </div>
-                );
-              }
-              return null;
-            })}
-          </Card.Body>
-        </Card>
+      }}
+    >
+      {individual && (
+        <DataComponent data={ individual } />
       )}
-    </div>
+    </Container>
   );
 }
 
