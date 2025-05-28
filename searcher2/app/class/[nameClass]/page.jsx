@@ -10,13 +10,13 @@ import { useRouter } from 'next/navigation';
 import { ArrowBack } from '@mui/icons-material';
 const host = 'http://localhost:5000';
 const local = 'http://localhost:3000';
-const ItemClassIndividual = ({name, iri, lang, nameClass}) => {
+const ItemClassIndividual = ({name, iri}) => {
     const router = useRouter();
     const theme = useTheme();
     const handleButton = (url) => {
         router.push(url);
     }
-
+    const nameIri = iri.split('#')[1];
     return (<Box>
          <Button 
             sx={{
@@ -28,7 +28,7 @@ const ItemClassIndividual = ({name, iri, lang, nameClass}) => {
                 } 
             }}
               onClick={ () => handleButton(
-                                `${local}/${lang['selected']}/class/${encodeURIComponent(nameClass)}/individual/${encodeURIComponent(iri)}`)}>
+                                `${local}/individual/${nameIri}`)}>
               <Typography>
                 {name}
               </Typography>
@@ -39,7 +39,7 @@ const ItemClassIndividual = ({name, iri, lang, nameClass}) => {
 function page() {
   const router = useRouter()
   const params = useParams();
-  const { locale, nameClass } = params;
+  const { nameClass } = params;
   const { setLoading } = useDataSearcher()
   const [individual, setIndividual] = useState(null);
   const  { lang } = useLanguage();
@@ -50,7 +50,7 @@ function page() {
   useEffect(() => {
     const fetchData = async () => {
         setLoading(true)
-        const uri = `${host}/searchClass?query=${decodeURIComponent(nameClass)}&lang=${locale}`;
+        const uri = `${host}/searchClass?query=${decodeURIComponent(nameClass)}&lang=${lang.selected}`;
         await fetch(uri,{
             method: 'GET',
             headers: {
@@ -61,7 +61,6 @@ function page() {
         .then(data => {
           setIndividual(data);
           setLoading(false)
-          console.log(data, individual)
         })
         .catch(error => {
             enqueueSnackbar(error)
@@ -103,9 +102,7 @@ function page() {
             {(individual) ? individual.map((data, index) => <ItemClassIndividual
                                                     key={ index+data.sample_name } 
                                                     name={ data.sample_name }
-                                                    nameClass={ nameClass }
                                                     iri={ data.iri }
-                                                    lang={ lang }
                                                     />):<></>}
                 
             </Box>

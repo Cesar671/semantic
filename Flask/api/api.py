@@ -13,12 +13,26 @@ def create_app():
     return app
 
 app = create_app()
-CORS(app)
+CORS(app, resources={
+  r"/searchClass": {
+    "origins": "http://localhost:3000",
+    "methods": ["GET"]
+  },
+  r"/search": {
+    "origins": "http://localhost:3000",
+    "methods": ["GET"]
+  },
+  r"/individual": {
+    "origins": "http://localhost:3000",
+    "methods": ["GET"]
+  }
+})
 
 """ API ROUTES """
 @app.route('/searchClass', methods=['GET'])
 def searchClass(): 
     query=  request.args['query']
+    print("asdadas -> "+query)
     if query is None: 
         abort(404, f"Class {query} not exists")
     return jsonify(ontology.getInstancesByClass(query, "es"))
@@ -51,7 +65,13 @@ def route_addition():
     return jsonify(dbpediaOntology.storeData(query).text)
     # return jsonify(dbpedia.verificate_name(query))
 
-
+@app.route('/individual', methods=['GET'])
+def route_get_individual():
+    iri = request.args['iri']
+    lang = request.args['lang']
+    link = f"http://www.semanticweb.org/mejia/cine#{iri}"
+    print(f"iri : { link } lang : { lang }")
+    return jsonify(ontology.get(link))
 
 if __name__ == '__main__' :
     app.run(debug=True)

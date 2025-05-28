@@ -32,7 +32,7 @@ const Item = ({ name, index, current, setCurrent, content }) => {
             <Button 
               onClick={ () => handleButton((name2Formated == "dbpedia") ? 
                                 data.iri:
-                                `${lang['selected']}/class/${encodeURIComponent(tokensName[tokensName.length-1])}/individual/${encodeURIComponent(data.iri)}`)}>
+                                `individual/${data.iri.split('#')[1]}`)}>
               <Typography>
                 {data.name}
               </Typography>

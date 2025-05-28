@@ -24,7 +24,6 @@ const DataComponent = ({data}) => {
         };
     }
     useEffect(() => {
-        console.log(data.name_class)
         if (isFirstRender.current) {
             isFirstRender.current = false;
             const dataProcessed = processIndividualData(data);
@@ -57,7 +56,6 @@ const DataComponent = ({data}) => {
                 })}
             {relations.map((obj, index) => {
                 const dataRelation = obj
-                console.log(dataRelation['properties'])
                 return (Object.keys(dataRelation['properties']).length > 1)&&<DataComponent key={index} data={dataRelation} />
             })}
         </>)}

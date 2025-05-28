@@ -59,6 +59,7 @@ const ItemButtonMenu = ({ setIsDeployed, url, name, Icon }) => {
 }
 
 const AsideMenu = () => {
+    const route = useRouter()
     const { lang } = useLanguage();
     const [isDeployed, setIsDeployed] = useState(false);
     const {modeContext} = React.useContext(ModeContext);
@@ -93,9 +94,11 @@ const AsideMenu = () => {
     >
         <div>
       <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Typography variant="h6" noWrap>
-          Mi Aplicación
-        </Typography>
+        <Button onClick={ () => route.push("/") } >
+          <Typography variant="h5" noWrap>
+            { lang.title }
+          </Typography>
+        </Button>
       </Toolbar>
       <Divider />
       <List>
@@ -103,7 +106,7 @@ const AsideMenu = () => {
             dataMenu.map((data, index) => <ItemButtonMenu 
                           key={ index+data.name }
                           setIsDeployed={ setIsDeployed } 
-                          url={`${local}/${lang['selected']}/class/${data.name}`}
+                          url={`${local}/class/${data.name}`}
                           name={data.name}
                           Icon = { data.icon }
           />)
