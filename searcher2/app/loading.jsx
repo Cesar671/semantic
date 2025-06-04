@@ -47,7 +47,7 @@ const Loading = () => {
                 borderRadius:"inherit",
             }}
         >
-            { lang["carga"] }
+            { lang?.carga }
         </Typography>
     </Box>
   )

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   FormControl,
   InputLabel,
@@ -10,7 +10,8 @@ import {
 } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import { useLanguage } from '../custom/languageSelectorContext';
-
+import { createStorage, getConfigs, setNewConfLang } from '../js/local';
+import { useRouter } from 'next/navigation';
 
 const languageOptions = [
   { code: 'en', name: 'English', flag: '🇬🇧' },
@@ -20,14 +21,25 @@ const languageOptions = [
 ];
 
 const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState('es');
-  const {lang, setLanguage} = useLanguage();
+  const router = useRouter();
+  const {lang, setLanguage, mounted, setMounted} = useLanguage();
+  const [selectedLanguage, setSelectedLanguage] = useState(null);
   const handleChange = (event) => {
     setSelectedLanguage(event.target.value);
     setLanguage(event.target.value);
+    setNewConfLang(event.target.value);
   };
+  useEffect(()=> {
+    const lang = getConfigs().lang
+    setSelectedLanguage(lang)
+    setMounted(true)
+  },[])
+  
+  if (!mounted) return null;
+
   return (
     <Box>
+      {(selectedLanguage && selectedLanguage !== "") &&
       <FormControl fullWidth size="small"
         sx={{
             width:"110px",
@@ -62,6 +74,8 @@ const LanguageSelector = () => {
           ))}
         </Select>
       </FormControl>
+      }
+      
     </Box>
   );
 };

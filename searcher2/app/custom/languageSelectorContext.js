@@ -1,5 +1,6 @@
 'use client';
 import React, { createContext, useContext, useState } from 'react'
+import { createStorage, getConfigs } from '../js/local';
 
 const langSelector = {
     'es':{
@@ -56,18 +57,22 @@ const langSelector = {
 
 const LanguageContext = createContext();
 
+createStorage();
+
 export const useLanguage =() => useContext(LanguageContext);
 
-const useLanguageCustom = (lang = 'es') => {
-    const [langS, setLang] = useState(langSelector['es']);
+const useLanguageCustom = () => {
+    const langUsed = getConfigs().lang;
+    const [langS, setLang] = useState(langSelector[langUsed]);
     const setLanguage = (l) => setLang(langSelector[l]);
-    return [langS, setLanguage]; 
+    const [mounted, setMounted] = useState(false)
+    return [langS, setLanguage, mounted, setMounted]; 
 }
 
 export const LanguageSelectorContext = ({ children }) => {
-    const [lang, setLanguage] = useLanguageCustom();
+    const [lang, setLanguage, mounted, setMounted] = useLanguageCustom();
   return (
-    <LanguageContext.Provider value={{lang, setLanguage}}>
+    <LanguageContext.Provider value={{lang, setLanguage, mounted, setMounted}}>
       { children }
     </LanguageContext.Provider>
   )

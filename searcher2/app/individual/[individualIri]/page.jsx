@@ -30,6 +30,7 @@ function page() {
       const keys = Object.keys(data.properties);
       setIndividual(data);
       setPropertiesKeys(keys)
+      console.log(data);
     } catch (error) {
       enqueueSnackbar(error.message);
     } finally {
@@ -38,7 +39,7 @@ function page() {
   };
 
   fetchAndProcessData();
-  }, [nameClass]);
+  }, [lang]);
 
   return (<>
     {individual && 
@@ -47,7 +48,8 @@ function page() {
       component="main"
     >
       <Typography variant="h2">{individual.name}</Typography>
-      <Button onClick={() => router.push(`${local}/class/${ individual.type[0] }`)}><Typography variant='h4'>{ individual.type[0] }</Typography></Button>
+      <Button 
+        onClick={() => router.push(`${local}/class/${ individual.type[individual.type.length-1][1] }`)}><Typography variant='h4'>{ individual.type[individual.type.length-1][0] }</Typography></Button>
       {propertiesKeys.map((key, i) => {
                     const data = individual.properties[key];
                     return (
@@ -55,11 +57,11 @@ function page() {
                         <strong>{key}: </strong>
                         <List>
                           {data.map((d) => 
-                              (dictionary[lang.selected].relations.includes(key)) ?
+                              (dictionary[lang.selected]?.relations.includes(key)) ?
                                       <ListItem key={ d }>
-                                        <Button onClick={() => router.push(`${local}/individual/${ d }`)} >{ d }</Button>
+                                        <Button onClick={() => router.push(`${local}/individual/${ d[1] }`)} >{ d[0] }</Button>
                                       </ListItem>:
-                                      <ListItem key={ d }>{ d }</ListItem>)}
+                                      <ListItem key={ d }>{ d[0] }</ListItem>)}
                         </List>
                     </div>
                     );

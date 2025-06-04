@@ -43,7 +43,7 @@ const Searcher = () => {
             padding:"5px",
             height:"50px",
         }}
-        placeholder={lang["app.placeholder"]}
+        placeholder={(lang) && lang["app.placeholder"]}
         value={ query }
         onChange={ handleQuery }
         onKeyDown={ (e) => (e.key === 'Enter' && !loading) && handleSubmit(lang, query, setResult, setLoading, enqueueSnackbar) }

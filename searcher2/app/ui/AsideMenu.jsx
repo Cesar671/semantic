@@ -94,9 +94,9 @@ const AsideMenu = () => {
     >
         <div>
       <Toolbar sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Button onClick={ () => route.push("/") } >
+        <Button onClick={ () => {route.push("/"); setIsDeployed(false)} } >
           <Typography variant="h5" noWrap>
-            { lang.title }
+            { lang?.title }
           </Typography>
         </Button>
       </Toolbar>

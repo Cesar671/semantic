@@ -10,12 +10,13 @@ import { useSnackbar } from 'notistack';
 const SearcherComplete = () => {
 const { result, query, setResult, setLoading, loading } = useDataSearcher();
   const theme = useTheme();
-  const { lang } = useLanguage();
+  const { lang, mounted } = useLanguage();
   const {enqueueSnackbar} = useSnackbar();
+  if (!mounted) return null;
   return (
     <motion.div 
           initial={false}
-          animate={{y: (result) ? "-47vh":0}}
+          animate={{y: (result) ? "-38vh":0}}
           transition={{type: 'spring', stiffness:100}}
           style={{
             position:"absolute",
@@ -50,7 +51,7 @@ const { result, query, setResult, setLoading, loading } = useDataSearcher();
                   justifyContent:"center",
                 }}
               >
-                { lang["title"] }
+                {(lang) && lang?.title }
               </Typography>
               <Searcher />{ (!result && (<Box>
                 <Button
@@ -63,7 +64,7 @@ const { result, query, setResult, setLoading, loading } = useDataSearcher();
                   }}
                   onClick={ () => handleSubmit(lang, query, setResult, setLoading, enqueueSnackbar) }
                 >
-                  { lang["app.search-button"] }
+                  {(lang) && lang["app.search-button"] }
                 </Button>
               </Box>)) }
               

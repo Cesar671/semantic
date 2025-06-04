@@ -20,7 +20,8 @@ export default function Home() {
         position:"relative",
         ".go1888806478":{
           backgroundColor:"red !important",
-        }
+        },
+        height:"80%"
       }}
     >
       <SearcherComplete />
