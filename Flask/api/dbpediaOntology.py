@@ -49,6 +49,7 @@ def verificate_name(name_search, lang='es'):
     sparql = SPARQLWrapper(DBPEDIA_ENDPOINTS.get(lang, 'http://dbpedia.org/sparql'))
     sparql.setReturnFormat(JSON)
 
+
     sparql.setQuery(f"""
         PREFIX dbo: <http://dbpedia.org/ontology/>
         PREFIX dbr: <http://dbpedia.org/resource/>
@@ -58,16 +59,19 @@ def verificate_name(name_search, lang='es'):
         WHERE {{
             ?resource dct:subject/skos:broader* <http://dbpedia.org/resource/Category:Film> ;
                       dbo:wikiPageWikiLink ?related .
+                      dbo:wikiPageWikiLink ?related .
             ?related rdfs:label ?name .
             FILTER(lang(?name) = "{lang}")
         }}
     """)
+
 
     results = [bind["name"]["value"] for bind in sparql.query().convert()['results']['bindings']]
 
     result_query = [name for name in results if name_search.lower() in name.lower()]
     return result_query[:50] if result_query else []
     
+
 def searchDBPedia(query, lang='es'):
     results = []
     #print("antes del for "+query)
@@ -80,6 +84,13 @@ def searchDBPedia(query, lang='es'):
             results.append({'iri': iri, 'name': name, 'translated_name': translate_text(name, lang)})
     return results
 
+def storeData(entity_type, lang='es'):
+    names = verificate_name(entity_type, lang=lang)
+
+    if not names:
+        return {"error": 400, "message": "No se encontraron entidades en DBpedia."}
+
+    sparql = SPARQLWrapper(DBPEDIA_ENDPOINTS.get(lang, 'http://dbpedia.org/sparql'))
 def storeData(entity_type, lang='es'):
     names = verificate_name(entity_type, lang=lang)
 
@@ -111,6 +122,7 @@ def storeData(entity_type, lang='es'):
                 OPTIONAL{{ FILTER(lang(?c) = "{lang}") }}
             }}
         """)
+
 
         try:
             result = sparql.query().convert()["results"]["bindings"]

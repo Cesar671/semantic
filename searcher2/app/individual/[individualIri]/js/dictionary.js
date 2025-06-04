@@ -43,7 +43,13 @@ export const dictionary ={
       "awardGivenToActor", "awardGivenToDirector", "awardGivenToWork", "produces",
       "appliesToWork", "It has an actor", "It has bossesonora", "hasSong", "It has critic", "He has director",
       "It has an envice", "It has studio", "It has geneanero", "It has personal", "It has production","Participate",
-      "Espartedeobra","Interpreted","Essecuelade",
+      "Espartedeobra","Interpreted","Essecuelade", "actorWins", "appearsIn", "directorWins", "directsWork", "isSoundtrackOf", "isPartOfWork",
+      "isPrequelOf", "isSequelOf", "isAboutTheWork", "studioDevelops", "genreBelongsToWork",
+      "playsAs", "playedBy", "workWins", "workHasSong", "participatesIn", "belongsTo",
+      "awardGivenToActor", "awardGivenToDirector", "awardGivenToWork", "produces",
+      "appliesToWork", "hasActor", "hasSoundtrack", "hasSong", "hasReview", "hasDirector",
+      "hasEdition", "hasStudio", "hasGenre", "hasCharacter", "hasProducer",
+      "Study develops",
     ]},
   'fr': {
     relations: [
@@ -52,7 +58,12 @@ export const dictionary ={
       "interpréter", "Interprété", "oeuvreGagne", "candion de travail", "Participer", "Il appartient",
       "prixDécernéActeur", "prixDécernéRéalisateur", "Prix ​​primé", "produit",
       "sAppliqueÀOeuvre", "Il a un acteur", "Il a Bossesonora", "Il a un cancon", "Il a un critique", "Il a le réalisateur",
-      "EsseCuelade","Il a un envice", "Il a un studio", "Il a Geneanero", "Il a personnel", "Il a la production"
+      "EsseCuelade","Il a un envice", "Il a un studio", "Il a Geneanero", "Il a personnel", "Il a la production","acteurGagne", "apparaitDans", "réalisateurGagne", "réaliseOeuvre", "estBandeSonDe", "faitPartieOeuvre",
+      "estPréquelleDe", "estSuiteDe", "estSurOeuvre", "studioDéveloppe", "genreAppartientOeuvre",
+      "interprète", "interprétéPar", "oeuvreGagne", "oeuvreAChanson", "participeÀ", "appartientÀ",
+      "prixDécernéActeur", "prixDécernéRéalisateur", "prixDécernéOeuvre", "produit",
+      "sAppliqueÀOeuvre", "aActeur", "aBandeSon", "aChanson", "aCritique", "aRéalisateur",
+      "aÉdition", "aStudio", "aGenre", "aPersonnage", "aProducteur"
     ]
   },
   'pt': {
@@ -65,7 +76,12 @@ export const dictionary ={
       "Tem uma inveja", "Tem estúdio", "Tem geneanero", "Tem pessoal", "Tem produção",
       "Essecuelade",
       "abraçando",
-      "Prêmio Award",
+      "Prêmio Award","atorGanha", "apareceEm", "diretorGanha", "dirigeObra", "éTrilhaSonoraDe", "éParteDaObra",
+      "éPrequelaDe", "éSequênciaDe", "éSobreObra", "estúdioDesenvolve", "gêneroPertenceAObra",
+      "interpreta", "interpretadoPor", "obraGanha", "obraTemCanção", "participaEm", "pertenceA",
+      "prêmioEntregueAoAtor", "prêmioEntregueAoDiretor", "prêmioEntregueÀObra", "produz",
+      "seAplicaÀObra", "temAtor", "temTrilhaSonora", "temCanção", "temCrítica", "temDiretor",
+      "temEdição", "temEstúdio", "temGênero", "temPersonagem", "temProdutora"
     ]
   }
     

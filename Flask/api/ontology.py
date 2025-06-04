@@ -15,8 +15,6 @@ path = path/'resource/cine.owx'
 ontology = get_ontology(str(path))
 ontology.load()
 
-from deep_translator import GoogleTranslator
-
 def translate_text(text, lang):
     if lang == 'es':
         return text
@@ -39,10 +37,8 @@ def translate_text(text, lang):
         print(f"Error de traducción: {text} --> {e}")
         return text
 
-
-
 def getClassesOntology():
-    return list({cls.name for cls in ontology.classes()})       
+    return list({cls.name for cls in ontology.classes()})            
 
 #print(getClassesOntology())
 
@@ -81,6 +77,7 @@ def get(iri: str, lang='es'):
     individual = ontology[name]
     if not individual:
         return None
+        return None
 
     result = {
         'name': translate_text(individual.name, lang),
@@ -89,6 +86,7 @@ def get(iri: str, lang='es'):
         'type': [[translate_text(cls.name, lang), cls.name] for cls in individual.is_a],
         'properties': {}
     }
+
 
     for prop in ontology.properties():
         if any(cls in prop.domain for cls in individual.is_a):
@@ -128,6 +126,7 @@ def InstancesByClass(name: str, lang='es'):
             "iri": instance.iri
         })
     return instances_data
+
 
 
 
