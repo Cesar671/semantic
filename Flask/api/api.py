@@ -1,7 +1,7 @@
 from flask import Flask, abort, request
 from flask import jsonify
 from flask_cors import CORS
-
+from deep_translator import GoogleTranslator 
 from textProcessing import processing
 import ontology
 import dbpediaOntology
@@ -32,27 +32,28 @@ CORS(app, resources={
 @app.route('/searchClass', methods=['GET'])
 def searchClass(): 
     query=  request.args['query']
-    print("asdadas -> "+query)
+    lang = request.args.get('lang', 'es')
     if query is None: 
         abort(404, f"Class {query} not exists")
-    return jsonify(ontology.getInstancesByClass(query, "es"))
+    results = ontology.getInstancesByClass(query, lang)
+    return jsonify(results)
 
 @app.route('/search', methods=['GET'])
 def search():
     
     query = processing(request.args['query'])
-    lang = request.args['lang']
+    lang = request.args.get('lang', 'es')
     if query is None:
         return jsonify({'error': 'Must have a query'}) # this must redirect the frontend
     #print("desde el api "+request.args['query'])    
-    result_dbpedia = dbpediaOntology.searchDBPedia(query)
+    result_dbpedia = dbpediaOntology.searchDBPedia(query, lang)
 
-    result = ontology.search(query)
+    result = ontology.search(query, lang)
     #print(len(result_dbpedia))
     if len(result_dbpedia) != 0: result['DOID.dbpedia.Film'] = result_dbpedia
 
     if len(result) == 0:
-        msg = 'No existen busquedas encontradas'
+        msg = GoogleTranslator(source='es', target=lang).translate('No existen búsquedas encontradas')
         result[msg] = []
 
     return result
@@ -71,7 +72,8 @@ def route_get_individual():
     lang = request.args['lang']
     link = f"http://www.semanticweb.org/mejia/cine#{iri}"
     print(f"iri : { link } lang : { lang }")
-    return jsonify(ontology.get(link))
+    return jsonify(ontology.get(link, lang))
+
 
 if __name__ == '__main__' :
     app.run(debug=True)
